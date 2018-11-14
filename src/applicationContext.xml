@@ -34,7 +34,8 @@
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="configLocation" value="classpath:hibernate.cfg.xml"></property>
-		<property name="mappingLocations" value="classpath:cn/edu/hzvtc/entity/*.hbm.xml"></property>
+	    <!-- <property name="mappingLocations" value="classpath:cn/edu/hzvtc/entity/*.hbm.xml"></property>  -->
+		<property name="mappingDirectoryLocations" value="classpath:cn/edu/hzvtc/entity"></property>
 	</bean>
 
 	<!-- 配置 Spring 的声明式事务 -->
