@@ -12,9 +12,7 @@ public class Gm implements java.io.Serializable {
 	private String name;// 姓名
 	
 	private Position position;// 职务编号
-
 	
-
 	public int getId() {
 		return id;
 	}

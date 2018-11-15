@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
+
+	<!-- 导入Bean配置文件 -->
+	<import resource="cn.edu.hzvtc.service.xml" />
+
+	<!--用户action配置 -->
+	<bean id="userAction" class="cn.edu.hzvtc.action.UserAction"
+		scope="prototype">
+		<property name="userServic" ref="userServic"></property>
+	</bean>
+	
+</beans>

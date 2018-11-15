@@ -13,6 +13,6 @@
 
 <body>
 <h1>红杏资本欢迎你！</h1>
-	<a href="front/index.jsp">查看主页</a>
+	<a href="front/login.jsp">查看主页</a>
 </body>
 </html>

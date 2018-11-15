@@ -172,8 +172,5 @@
 			</section>
 
 		<%@ include file="../pub/bottom.jsp"%> 
-		<script src="js/vendor/jquery-3.3.1.min.js"></script>
-		<script src="js/vendor/OwlCarousel2-2.3.4/owl.carousel.min.js"></script>
-
 	</body>
 </html>

@@ -17,11 +17,11 @@
 		<div class="wrapper">
 			<h2>登录</h2>
 			<div class="w3ls-form">
-				<form action="/" method="post">
+				<form action="use_login.action" method="post">
 					<label>用户名</label>
-					<input type="text" name="name" placeholder="Username" required/>
+					<input type="text" name="user.id" placeholder="Username" required/>
 					<label>密码</label>
-					<input type="text" name="password" placeholder="Password" required />
+					<input type="text" name="user.password" placeholder="Password" required />
 					<a href="#" class="pass">Forgot Password ?</a>
 					<input type="submit" value="登录" />
 				</form>
@@ -35,7 +35,7 @@
 		</div>
 		<br>
 		<div class="copyright">
-		<p>© 2017 Winter Login. | Design by <a href="#">W3layouts</a></p> 
+		<p>© 2017  <a href="#">红杏资本</a></p> 
 	</div>
 	</div>
 	

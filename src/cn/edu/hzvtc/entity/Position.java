@@ -11,9 +11,7 @@ public class Position implements java.io.Serializable {
 
 	public Position() {
 	}
-
 	
-
 	public int getId() {
 		return id;
 	}

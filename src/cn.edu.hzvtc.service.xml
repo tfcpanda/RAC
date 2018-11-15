@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
+
+	<!-- 导入Bean配置文件 -->
+	<import resource="cn.edu.hzvtc.dao.xml" />
+
+	<!--用户service配置 -->
+	<bean id="userService" class="cn.edu.hzvtc.service.impl.UserServiceImpl">
+		<property name="userDao" ref="userDao" />
+	</bean>
+
+</beans>

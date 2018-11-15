@@ -1,5 +1,5 @@
 package cn.edu.hzvtc.service;
 
-public interface User {
+public interface PmService {
 
 }
