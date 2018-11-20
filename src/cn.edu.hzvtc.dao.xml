@@ -7,4 +7,8 @@
 	<bean id="userDao" class="cn.edu.hzvtc.dao.impl.UserDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
+	<!-- 后台配置 -->
+	<bean id="employeeDao" class="cn.edu.hzvtc.dao.EmployeeDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
 </beans>

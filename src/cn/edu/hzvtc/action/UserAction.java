@@ -6,11 +6,11 @@ import cn.edu.hzvtc.entity.User;
 import cn.edu.hzvtc.service.impl.UserServiceImpl;
 
 public class UserAction extends ActionSupport{
-	
+
 	private static final long serialVersionUID = 1L;
 	private UserServiceImpl userServic;
 	private User user;
-	
+
 	public User getUser() {
 		return user;
 	}
@@ -20,11 +20,13 @@ public class UserAction extends ActionSupport{
 	public UserServiceImpl getUserServic() {
 		return userServic;
 	}
+	public void setUserServic(UserServiceImpl userServic) {
+		this.userServic = userServic;
+	}
 	public String login() {
 		try {
 			if (userServic.login(user)) {
 				return "success";
-				
 			} else {
 				return "input";
 			}
@@ -33,9 +35,7 @@ public class UserAction extends ActionSupport{
 		}
 		return null;
 	}
-	public void setUserServic(UserServiceImpl userServic) {
-		this.userServic = userServic;
-	}
-	
-	
+
+
+
 }

@@ -23,9 +23,9 @@ public class UserServiceImpl implements UserService {
 	//登陆方法
 	public boolean login(User user) {
 		List<User> list = userDao.login(user);
-		boolean flag = false;
+		boolean flag = true;
 		if (!list.isEmpty()) {
-			flag = true;
+			flag = false;
 		}
 		return flag;
 	}

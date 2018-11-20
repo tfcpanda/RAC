@@ -17,7 +17,7 @@
 		<div class="wrapper">
 			<h2>登录</h2>
 			<div class="w3ls-form">
-				<form action="use_login.action" method="post">
+				<form action="use-login.action" method="post">
 					<label>用户名</label>
 					<input type="text" name="user.id" placeholder="Username" required/>
 					<label>密码</label>

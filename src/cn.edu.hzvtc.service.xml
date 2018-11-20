@@ -7,8 +7,13 @@
 	<import resource="cn.edu.hzvtc.dao.xml" />
 
 	<!--用户service配置 -->
-	<bean id="userService" class="cn.edu.hzvtc.service.impl.UserServiceImpl">
+	<bean id="userService"
+		class="cn.edu.hzvtc.service.impl.UserServiceImpl">
 		<property name="userDao" ref="userDao" />
 	</bean>
 
+	<!-- 后台配置 -->
+	<bean id="employeeService" class="cn.edu.hzvtc.service.EmployeeService">
+		<property name="employeeDao" ref="employeeDao"></property>
+	</bean>
 </beans>

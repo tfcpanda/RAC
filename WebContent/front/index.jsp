@@ -8,7 +8,7 @@
 		<title>红杏资本投资网站</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="../css/normalize.css" />
-		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../css/main-front.css" />
 		<link rel="stylesheet" href="../js/vendor/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
 		<link rel="stylesheet" href="../js/vendor/OwlCarousel2-2.3.4/assets/owl.theme.default.min.css">
 	</head>
