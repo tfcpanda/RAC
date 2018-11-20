@@ -4,8 +4,9 @@ import java.util.List;
 
 import cn.edu.hzvtc.dao.EmployeeDao;
 import cn.edu.hzvtc.entity.Employee;
+import cn.edu.hzvtc.service.EmployeeService;
 
-public class EmployeeService {
+public class EmployeeServiceImpl implements EmployeeService {
 	//业务逻
 	private EmployeeDao employeeDao;
 	public void setEmployeeDao(EmployeeDao employeeDao) {

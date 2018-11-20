@@ -3,11 +3,10 @@ package cn.edu.hzvtc.dao.impl;
 import java.util.List;
 
 import org.hibernate.Query;
-
-
+import cn.edu.hzvtc.dao.EmployeeDao;
 import cn.edu.hzvtc.entity.Employee;
 
-public class EmployeeDaoImpl extends BaseDaoImpl<Employee>{
+public class EmployeeDaoImpl extends BaseDaoImpl<Employee> implements EmployeeDao{
 
 	public List<Employee> getAll() {
 		String hql = "From Employee e LEFT OUTER JOIN FETCH e.department";

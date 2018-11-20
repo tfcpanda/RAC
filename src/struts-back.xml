@@ -12,5 +12,4 @@
 			<result name="deleteAll" type="redirect">/emp-list</result>
 		</action>
 	</package>
-
 </struts>
