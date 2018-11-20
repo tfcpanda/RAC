@@ -52,8 +52,7 @@
 	</bean>
 
 	<!-- 2. 配置事务属性 -->
-	<tx:advice id="txAdvice"
-		transaction-manager="transactionManager">
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
 		<tx:attributes>
 			<tx:method name="get*" read-only="true" />
 			<tx:method name="lastNameIsValid" read-only="true" />
@@ -64,10 +63,12 @@
 	<!-- 3. 配置事务切入点, 再把事务属性和事务切入点关联起来 -->
 	<aop:config>
 		<aop:pointcut
-			expression="execution(* cn.edu.hzvtc.services.*.*(..))"
+			expression="execution(* cn.edu.hzvtc.service.impl.*ServiceImpl.*(..))"
 			id="txPointcut" />
-		<aop:advisor advice-ref="txAdvice"
-			pointcut-ref="txPointcut" />
+			<!-- 切面：
+				切入点+通知  
+			-->
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut" />
 	</aop:config>
 
 	<!-- 导入Bean配置文件 -->

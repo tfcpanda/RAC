@@ -9,6 +9,7 @@ import cn.edu.hzvtc.service.EmployeeService;
 public class EmployeeServiceImpl implements EmployeeService {
 	//业务逻
 	private EmployeeDao employeeDao;
+	
 	public void setEmployeeDao(EmployeeDao employeeDao) {
 		this.employeeDao = employeeDao;
 	}

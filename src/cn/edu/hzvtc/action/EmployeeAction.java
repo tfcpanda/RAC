@@ -200,7 +200,7 @@ public class EmployeeAction extends ActionSupport implements SessionAware,Reques
 	}
 
 	// 得到Bean里面的数据
-	public void GetBeanData() {
+	public String GetBeanData() {
 		pageBean = new PageBean<Employee>();
 		pageBean.setPageNo(pageNo);
 		pageBean.setPageSize(5);
@@ -210,6 +210,7 @@ public class EmployeeAction extends ActionSupport implements SessionAware,Reques
 				(pageBean.getPageNo() - 1) * pageBean.getPageSize(),
 				pageBean.getPageSize());
 		pageBean.setData(datas);
+		return "list";
 	}
 
 }

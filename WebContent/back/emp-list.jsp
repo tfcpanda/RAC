@@ -10,8 +10,8 @@
 <title>后台管理</title>
 <link rel="stylesheet" type="text/css" href="../css/common.css" />
 <link rel="stylesheet" type="text/css" href="../css/main.css" />
-<script type="text/javascript" src="js/libs/modernizr.min.js"></script>
-<script type="text/javascript" src="./scripts/jquery-3.3.1.min.js">		
+<script type="text/javascript" src="../js/modernizr.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery-3.3.1.min.js">		
 </script>
 </head>
 
