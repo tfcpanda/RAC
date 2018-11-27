@@ -41,5 +41,11 @@ public class EmployeeDaoImpl extends BaseDaoImpl<Employee> implements EmployeeDa
 		 Query query = getSession().createQuery(hql);
 	        query.executeUpdate();
 	    }
-
+	@Override
+	public void save(Employee employee) {
+		
+		
+	}
+	
+	
 }	

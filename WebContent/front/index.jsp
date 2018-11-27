@@ -9,8 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="../css/normalize.css" />
 		<link rel="stylesheet" href="../css/main-front.css" />
-		<link rel="stylesheet" href="../js/vendor/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
-		<link rel="stylesheet" href="../js/vendor/OwlCarousel2-2.3.4/assets/owl.theme.default.min.css">
+	
 	</head>
 	<body>
 		<!--[if lte IE8]>	
@@ -18,13 +17,10 @@
 			<section class="ad">
 				<div class="owl-carousel owl-theme">
 					<div class="item">
-						<img src="img/ad001.png" />
 					</div>
 					<div class="item">
-						<img src="img/ad002.png" />
 					</div>
 					<div class="item">
-						<img src="img/ad003.png" />
 					</div>
 				</div>
 			</section>

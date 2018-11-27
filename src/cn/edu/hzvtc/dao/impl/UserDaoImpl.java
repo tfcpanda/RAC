@@ -13,11 +13,11 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao {
 	//登陆方法
 	@Override
 	public List<User> login(User user) {
-			String hql = "FROM User WHERE id=? AND  password=?";
+			String hql = "FROM User WHERE id=? AND  passWord=?";
 			Query query = getSession().createQuery(hql);
 			query.setInteger(0, user.getId());
 			query.setString(1, user.getPassWord());
 			List<User> list = query.list();
-			return  list;
+			return list;
 	}
 }

@@ -3,29 +3,29 @@ package cn.edu.hzvtc.action;
 import com.opensymphony.xwork2.ActionSupport;
 
 import cn.edu.hzvtc.entity.User;
-import cn.edu.hzvtc.service.impl.UserServiceImpl;
+import cn.edu.hzvtc.service.UserService;
+
 
 public class UserAction extends ActionSupport{
 
 	private static final long serialVersionUID = 1L;
-	private UserServiceImpl userServic;
+	private UserService userService;
 	private User user;
 
+	public void setUserService(UserService userService) {
+		this.userService = userService;
+	}
+	
 	public User getUser() {
 		return user;
 	}
 	public void setUser(User user) {
 		this.user = user;
 	}
-	public UserServiceImpl getUserServic() {
-		return userServic;
-	}
-	public void setUserServic(UserServiceImpl userServic) {
-		this.userServic = userServic;
-	}
+	
 	public String login() {
 		try {
-			if (userServic.login(user)) {
+			if (userService.login(user)) {
 				return "success";
 			} else {
 				return "input";
@@ -35,7 +35,4 @@ public class UserAction extends ActionSupport{
 		}
 		return null;
 	}
-
-
-
 }

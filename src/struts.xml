@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "struts-2.1.dtd" >
 <struts>
-	<constant name="struts.enable.DynamicMethodInvocation" value="false"></constant>
-
-	<constant name="struts.devMode" value="true"></constant>
-
-	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
-
-	<constant name="struts.ui.theme" value="simple" /> <!-- 换行 -->
-
-	<!-- 验证码操作Action配置 -->
-	<package name="defaults" namespace="/" extends="struts-default">
-		<action name="use-*" class="cn.edu.hzvtc.action.UserAction"
-			method="{1}">
-			<result name="input" type="dispatcher">/login.jsp</result>
-			<result name="success">/index.jsp</result>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+	<package name="default" namespace="/" extends="struts-default,json-default">
+		<action name="emp-*" class="employeeAction" method="{1}">
+			<result name="list">/back/emp-list.jsp</result>
+			<result name="success" type="redirect">/emp-list</result>
+			<result name="ajax-success" type="json"></result>
+			<result name="input">/back/emp-input.jsp</result>
+			<result name="deleteAll" type="redirect">/emp-list</result>
 		</action>
 	</package>
-	<include file="struts-back.xml"></include>
 </struts>
+	

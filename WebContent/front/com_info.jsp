@@ -137,9 +137,6 @@
 			</ul>
 			<p>杭州红杏资本投资公司 版权所有 © 2018-2020</p>
 		</footer>
-		<script src="js/vendor/jquery-3.3.1.min.js"></script>
-		<script src="js/vendor/OwlCarousel2-2.3.4/owl.carousel.min.js"></script>
-
 	</body>
 </html>
 

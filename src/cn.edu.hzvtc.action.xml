@@ -6,16 +6,4 @@
 	<!-- 导入Bean配置文件 -->
 	<import resource="cn.edu.hzvtc.service.xml" />
 
-	<!--用户登陆配置 -->
-	<bean id="userAction" class="cn.edu.hzvtc.action.UserAction"
-		scope="prototype">
-		<property name="userServic" ref="userServic"></property>
-	</bean>
-	<!-- 后台配置 -->
-		<bean id="employeeAction" class="cn.edu.hzvtc.action.EmployeeAction"
-		scope="prototype">
-		<property name="employeeService" ref="employeeService"></property>
-		<property name="departmentService" ref="departmentService"></property>
-	</bean>
-	
 </beans>

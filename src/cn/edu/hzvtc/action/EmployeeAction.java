@@ -7,8 +7,6 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
-
-
 import cn.edu.hzvtc.entity.Employee;
 import cn.edu.hzvtc.entity.PageBean;
 import cn.edu.hzvtc.service.DepartmentService;
@@ -71,6 +69,7 @@ public class EmployeeAction extends ActionSupport implements SessionAware,Reques
 	public void setEmployee(Employee employee) {
 		this.employee = employee;
 	}
+	
 	public String save() {
 		if (employee.getId() == null) {
 			employee.setCreateTime(new Date());
@@ -200,7 +199,7 @@ public class EmployeeAction extends ActionSupport implements SessionAware,Reques
 	}
 
 	// 得到Bean里面的数据
-	public String GetBeanData() {
+	public void GetBeanData() {
 		pageBean = new PageBean<Employee>();
 		pageBean.setPageNo(pageNo);
 		pageBean.setPageSize(5);
@@ -210,7 +209,6 @@ public class EmployeeAction extends ActionSupport implements SessionAware,Reques
 				(pageBean.getPageNo() - 1) * pageBean.getPageSize(),
 				pageBean.getPageSize());
 		pageBean.setData(datas);
-		return "list";
 	}
 
 }

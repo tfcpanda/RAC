@@ -17,11 +17,11 @@
 		<div class="wrapper">
 			<h2>登录</h2>
 			<div class="w3ls-form">
-				<form action="use-login.action" method="post">
+				<form action="use-login" method="post">
 					<label>用户名</label>
-					<input type="text" name="user.id" placeholder="Username" required/>
+					<input type="text" name="user.id" placeholder="User" required/>
 					<label>密码</label>
-					<input type="text" name="user.password" placeholder="Password" required />
+					<input type="text" name="user.passWord" placeholder="Password" required />
 					<a href="#" class="pass">Forgot Password ?</a>
 					<input type="submit" value="登录" />
 				</form>

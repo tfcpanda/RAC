@@ -8,8 +8,8 @@ public interface BaseDao <T>{
 	//删除
 	 void delete(Integer id);
 	//按ID查询
-	public T findEntityById(Integer id);
+	 T findEntityById(Integer id);
 	//查询全部
-	public List<T> getAll();
+	 List<T> getAll();
 		
 }
