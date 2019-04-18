@@ -9,19 +9,19 @@
 			<generator class="native" />
 		</id>
 		
+		<property name="name" type="java.lang.String">
+			<column name="NAME" length="19" not-null="true">
+				<comment>产品名称</comment>
+			</column>
+		</property>
 		<property name="price" type="java.lang.Integer">
-			<column name="PRICE" length="19" not-null="true">
+			<column name="PRICE" not-null="true">
 				<comment>产品价格</comment>
 			</column>
 		</property>
-		<property name="responseRate" type="java.lang.String">
-			<column name="RESPONSERATE" not-null="true">
-				<comment>回报率</comment>
-			</column>
-		</property>
-		<property name="storageTime" type="java.lang.String">
-			<column name="STORAGETIME"  not-null="true">
-				<comment>定期时间</comment>
+		<property name="description" type="java.lang.String">
+			<column name="DESCRIPTION"  not-null="true">
+				<comment>产品的描述</comment>
 			</column>
 		</property>
 		

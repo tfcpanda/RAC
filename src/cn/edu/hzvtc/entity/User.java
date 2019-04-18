@@ -2,10 +2,9 @@ package cn.edu.hzvtc.entity;
 
 
 /**
- * 审核结果实体类
+ *   用户的实体类
  */
-public class User implements java.io.Serializable {
-	private static final long serialVersionUID = 1L;
+public class User {
 	private int id;  	  		 //主键
 	private String passWord; 	// 密码
 	private String name; 	   // 用户名
@@ -22,13 +21,9 @@ public class User implements java.io.Serializable {
 		return id;
 	}
 
-
-
 	public void setId(int id) {
 		this.id = id;
 	}
-
-
 
 	public String getPassWord() {
 		return passWord;
@@ -93,8 +88,8 @@ public class User implements java.io.Serializable {
 	}
 
 
-	
 
-	
+
+
 
 }
