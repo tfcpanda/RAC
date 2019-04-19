@@ -4,12 +4,16 @@ package cn.edu.hzvtc.service.impl;
 import cn.edu.hzvtc.entity.User;
 import cn.edu.hzvtc.service.UserService;
 
-import java.util.List;
 
+import org.springframework.transaction.annotation.Transactional;
 
 import cn.edu.hzvtc.dao.UserDao;
 
+@Transactional
 public class UserServiceImpl implements UserService {
+	/*
+	 * 注入UserDao
+	 */
 	private UserDao userDao;
 	
 	public UserDao getUserDao() {
@@ -22,13 +26,20 @@ public class UserServiceImpl implements UserService {
 	
 	//登陆方法
 	public boolean login(User user) {
-		List<User> list = userDao.login(user);
-		boolean flag = true;
-		if (!list.isEmpty()) {
-			flag = false;
-		}
-		return flag;
+		return false;
+		
 	}
 
+	@Override
+	public User findEntityByname(String name) {
+		return userDao.findEntityByname(name);
+	}
+
+	/*
+	 * 业务层完成用户注册代码
+	 */
+	public void save (User user) {
+		userDao.save(user); 
+	}
 	
 }

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "struts-2.1.dtd" >
 <struts>
-	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.enable.DynamicMethodInvocation"
+		value="false" />
 	<constant name="struts.devMode" value="true" />
-	<package name="default" namespace="/" extends="struts-default,json-default">
-		<action name="emp-*" class="employeeAction" method="{1}">
-			<result name="list">/back/emp-list.jsp</result>
-			<result name="success" type="redirect">/emp-list</result>
-			<result name="ajax-success" type="json"></result>
-			<result name="input">/back/emp-input.jsp</result>
-			<result name="deleteAll" type="redirect">/emp-list</result>
+	<package name="index" namespace="/"
+		extends="struts-default,json-default">
+		<action name="index" class="IndexAction">
+			<result name="index">/front/index.jsp</result>
 		</action>
 	</package>
+
+	<include file="struts-user.xml"></include>
+		
 </struts>
-	
+

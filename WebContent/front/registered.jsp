@@ -1,44 +1,64 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
-<html lang="en">
-	<head>
-		<!-- Meta tags -->
-		<title>注册</title>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- stylesheets -->
-		<!-- 小图标 -->
-		<link rel="stylesheet" href="../css/font-awesome.css">
-		<link rel="stylesheet" href="../css/style.css">
-	</head>
-	<body>
-		<div class="agile-login">
-			<h1>红杏资本</h1>
-			<div class="wrapper">
-				<h2>注册</h2>
-				<div class="w3ls-form">
-					<form action="/" method="post">
-						<label>用户名</label>
-						<input type="text" name="name" placeholder="Username" required />
-						<label>密码</label>
-						<input type="text" name="password" placeholder="Password" required />
-						<label>邮箱</label>
-						<input type="text" name="password" placeholder="Password" required />
-						<input type="submit" value="注册用户" />
-					</form>
-				</div>
+<%@taglib prefix="s" uri="/struts-tags"%>
+<%@ include file="../pub/top.jsp"%>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<!--强制IE最高版本加载-->
+<title>红杏资本投资网站</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/normalize.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/main-front.css" />
 
-				<div class="agile-icons">
-					<a href="#"><span class="fa fa-twitter" aria-hidden="true"></span></a>
-					<a href="#"><span class="fa fa-facebook"></span></a>
-					<a href="#"><span class="fa fa-pinterest-p"></span></a>
-				</div>
-			</div>
-			<br>
-			<div class="copyright">
-				<p>© 2017 Winter Login. All rights reserved | Design by <a href="www.w3layouts.com">W3layouts</a></p>
-			</div>
-		</div>
+</head>
+<body>
+	<form method="post">
+		<table width="100%">
+			<tr>
+				<th colspan="6" ALIGN=CENTER><font size="6">注册新用户</font></th>
+			</tr>
 
-	</body>
+			<tr>
+				<td colspan="3">
+					<hr>
+				</td>
+			</tr>
+
+			<tr>
+				<td width="400"></td>
+				<td ALIGN=CENTER BGCOLOR="#ffffff">
+					<table width="400" cellpadding="4">
+						<tr>
+							<td ALIGN=RIGHT><font size="3" face="微软雅黑">用户名</font></td>
+							<td ALIGN=LEFT><input name="name" tyoe="texe"></td>
+						</tr>
+						<tr>
+							<td ALIGN=RIGHT><font size="3" face="微软雅黑">登陆邮箱</font></td>
+							<td ALIGN=LEFT><input name="password" type="text"></td>
+						</tr>
+						<tr>
+							<td ALIGN=RIGHT><font size="3" face="微软雅黑">再输一次</font></td>
+							<td ALIGN=LEFT><input type="password"></td>
+						</tr>
+					</table>
+				</td>
+				<td width="400"></td>
+			</tr>
+			<tr>
+				<td width="400"></td>
+				<td ALIGN=CENTER BGCOLOR="#ffffff">
+					<table width="400" cellpadding="4">
+						<tr>
+							<td ALIGN="center" colspan="3"><input type="submit"
+								value="注册"> <input type="reset" value="重置"></td>
+						</tr>
+					</table>
+		</table>
+	</form>
+
+	<%@ include file="../pub/bottom.jsp"%>
+</body>
 </html>

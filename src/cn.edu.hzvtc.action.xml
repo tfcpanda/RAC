@@ -5,22 +5,24 @@
 
 	<!-- 导入Bean配置文件 -->
 	<import resource="cn.edu.hzvtc.service.xml" />
+	<!-- 首页访问Action -->
+	<bean id="IndexAction" class="cn.edu.hzvtc.action.IndexAction" 	scope="prototype"> 
+	</bean>
 	
 	<!-- ation 配置 -->
-	<bean id="employeeAction" class="cn.edu.hzvtc.actions.EmployeeAction"
-		scope="prototype">
+	<bean id="EmployeeAction" class="cn.edu.hzvtc.action.EmployeeAction" scope="prototype">
 		<property name="employeeService" ref="employeeService"></property>
 		<property name="departmentService" ref="departmentService"></property>
 	</bean>
 	
-	<!-- 用户登录 -->
-	<bean id="UserAction" class="cn.edu.hzvtc.actions.UserAction"
+	<!-- 用户模块的Action -->
+	<bean id="UserAction" class="cn.edu.hzvtc.action.UserAction"
 		scope="prototype">
 		<property name="userService" ref="userService"></property>
 	</bean>
 	
 	<!-- 页面显示 -->
-	<bean id="InfoAction" class="cn.edu.hzvtc.actions.InfoAction"
+	<bean id="InfoAction" class="cn.edu.hzvtc.action.InfoAction"
 		scope="prototype">
 		<property name="infoService" ref="infoService"></property>
 	</bean>

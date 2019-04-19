@@ -1,5 +1,27 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
-<%@ include file="../pub/top.jsp"%> 
+<header>     
+			<nav class="top">
+				<span class="tel">理财热线：400-888-8888</span>
+				<ul>
+					<li><a href="#">登录</a></li>
+					<li><a href="${pageContext.request.contextPath}/user_registPage.action">快速注册</a></li>
+					<li><a href="#">关于</a></li>
+					<li><a href="#">帮助</a></li>
+					<li><a href="#">APP下载</a></li>
+				</ul>
+			</nav>
+			<nav class="main">
+				<a href="#" class="brand"><img src="${pageContext.request.contextPath}/img/logo.png" alt="回到首页" /></a>
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">理财频道</a></li>
+					<li><a href="#">投资频道</a></li>
+					<li><a href="#">新手专区</a></li>
+					<li><a href="#">安全保障</a></li>
+				</ul>
+			</nav>
+		</header>
+<%@ include file="../pub/topwithlogin.jsp"%> 
 <html lang="zh-CN">
 	<head>
 		<meta charset="utf-8" />
@@ -7,23 +29,13 @@
 		<!--强制IE最高版本加载-->
 		<title>红杏资本投资网站</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="../css/normalize.css" />
-		<link rel="stylesheet" href="../css/main-front.css" />
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/normalize.css" />
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/main-front.css" />
 	
 	</head>
 	<body>
 		<!--[if lte IE8]>	
 		<![endif]-->
-			<section class="ad">
-				<div class="owl-carousel owl-theme">
-					<div class="item">
-					</div>
-					<div class="item">
-					</div>
-					<div class="item">
-					</div>
-				</div>
-			</section>
 			<section class="feature">
 				<div class="item">
 					<h3>安全</h3>

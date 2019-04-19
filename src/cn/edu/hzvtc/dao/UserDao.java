@@ -1,10 +1,11 @@
 package cn.edu.hzvtc.dao;
 
-import java.util.List;
 
 import cn.edu.hzvtc.entity.User;
 
 public interface UserDao extends BaseDao<User>{
+	public User findEntityByname(String name);	
 	
-	public List<User> login(User user);
+	public void save(User user);
+	
 }
