@@ -4,7 +4,7 @@ import cn.edu.hzvtc.entity.User;
 
 public interface UserService {
 	
-	public boolean login(User user);
+	public User login(User user);
 	
 	public User findEntityByname(String name);
 

@@ -8,12 +8,18 @@
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	<!-- 后台配置 -->
-	<bean id="employeeDao" class="cn.edu.hzvtc.dao.impl.EmployeeDaoImpl">
+	<bean id="employeeDao"
+		class="cn.edu.hzvtc.dao.impl.EmployeeDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
-	
-	<bean id="departmentDao" class="cn.edu.hzvtc.dao.impl.DepartmentDaoImpl">
+
+	<bean id="departmentDao"
+		class="cn.edu.hzvtc.dao.impl.DepartmentDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
-	
+
+	<bean id="productDao" class="cn.edu.hzvtc.dao.impl.ProductDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
 </beans>

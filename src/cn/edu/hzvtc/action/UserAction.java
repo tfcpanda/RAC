@@ -1,5 +1,7 @@
 package cn.edu.hzvtc.action;
 
+import org.apache.struts2.ServletActionContext;
+
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
@@ -37,9 +39,41 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 	 */
 	public String regist() {
 		userService.save(user);
-		return NONE;
+		return "regist";
 	}
 	
-
-
+	/*
+	 * 跳转到登录页面的执行方法
+	 */
+	public String loginPage() {
+		return "loginPage";
+	}
+	
+	/*
+	 * 用户登录的方法
+	 */
+	public String login() {
+		User existUser= userService.login(user);
+		if(existUser == null) {
+			//登录失败
+			this.addActionError("登录失败");
+			return LOGIN;
+		}else {
+			//登录成功
+			//将用户的信息存进session中
+			ServletActionContext.getRequest().getSession().setAttribute("existUser", existUser);
+			//完成页面的跳转
+			return "loginSuccess";
+		}
+		
+	}
+	
+	/*
+	 * 用户退出的方法
+	 */
+	public String quit() {
+		//销毁session
+		ServletActionContext.getRequest().getSession().invalidate();
+		return "quit";
+	}
 	}

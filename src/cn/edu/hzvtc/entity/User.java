@@ -1,5 +1,5 @@
 package cn.edu.hzvtc.entity;
-// Generated Apr 19, 2019 9:57:07 PM by Hibernate Tools 4.3.5.Final
+// Generated Apr 20, 2019 3:37:47 PM by Hibernate Tools 4.3.5.Final
 
 import java.util.HashSet;
 import java.util.Set;

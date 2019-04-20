@@ -15,7 +15,8 @@
 
 </head>
 <body>
-	<form method="post">
+
+	<form method="post" action="${pageContext.request.contextPath}/user_regist.action">
 		<table width="100%">
 			<tr>
 				<th colspan="6" ALIGN=CENTER><font size="6">注册新用户</font></th>
@@ -31,18 +32,34 @@
 				<td width="400"></td>
 				<td ALIGN=CENTER BGCOLOR="#ffffff">
 					<table width="400" cellpadding="4">
-						<tr>
-							<td ALIGN=RIGHT><font size="3" face="微软雅黑">用户名</font></td>
-							<td ALIGN=LEFT><input name="name" tyoe="texe"></td>
-						</tr>
-						<tr>
-							<td ALIGN=RIGHT><font size="3" face="微软雅黑">登陆邮箱</font></td>
-							<td ALIGN=LEFT><input name="password" type="text"></td>
-						</tr>
-						<tr>
-							<td ALIGN=RIGHT><font size="3" face="微软雅黑">再输一次</font></td>
-							<td ALIGN=LEFT><input type="password"></td>
-						</tr>
+								<tr>
+					<td ALIGN=RIGHT><font size="3" face="微软雅黑">用户名</font></td>
+					<td ALIGN=LEFT><input tyoe="texe" name="name"></td>
+				</tr>
+				<tr>
+					<td ALIGN=RIGHT><font size="3" face="微软雅黑">密码</font></td>
+					<td ALIGN=LEFT><input type="text" name="password"></td>
+				</tr>
+				<tr>
+					<td ALIGN=RIGHT><font size="3" face="微软雅黑">手机号码</font></td>
+					<td ALIGN=LEFT><input type="texe" name="phone"></td>
+				</tr>
+				<tr>
+					<td ALIGN=RIGHT><font size="3" face="微软雅黑">邮箱</font></td>
+					<td ALIGN=LEFT><input type="texe" name="email"></td>
+				</tr>
+				<tr >
+					<td ALIGN=RIGHT><font size="3" face="微软雅黑">资金</font></td>
+					<td ALIGN=LEFT><input type="texe" name="money"></td>
+				</tr>
+				<tr>
+					<td ALIGN=RIGHT><font size="3" face="微软雅黑">真实姓名</font></td>
+					<td ALIGN=LEFT><input type="texe" name="actualname"></td>
+				</tr>
+				<tr>
+					<td ALIGN=RIGHT><font size="3" face="微软雅黑">身份证号</font></td>
+					<td ALIGN=LEFT><input type="texe" name="idcard"></td>
+				</tr>
 					</table>
 				</td>
 				<td width="400"></td>
@@ -58,7 +75,6 @@
 					</table>
 		</table>
 	</form>
-
 	<%@ include file="../pub/bottom.jsp"%>
 </body>
 </html>

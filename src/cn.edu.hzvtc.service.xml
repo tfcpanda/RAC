@@ -13,11 +13,18 @@
 	</bean>
 
 	<!-- 后台配置 -->
-	<bean id="employeeService" class="cn.edu.hzvtc.service.impl.EmployeeServiceImpl">
+	<bean id="employeeService"
+		class="cn.edu.hzvtc.service.impl.EmployeeServiceImpl">
 		<property name="employeeDao" ref="employeeDao"></property>
 	</bean>
-	
-	<bean id="departmentService" class="cn.edu.hzvtc.service.impl.DepartmentServiceImpl">
+
+	<bean id="departmentService"
+		class="cn.edu.hzvtc.service.impl.DepartmentServiceImpl">
 		<property name="departmentDao" ref="departmentDao"></property>
+	</bean>
+
+	<bean id="productService"
+		class="cn.edu.hzvtc.service.impl.ProductServiceImpl">
+		<property name="productDao" ref="productDao"></property>
 	</bean>
 </beans>

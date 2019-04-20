@@ -5,8 +5,8 @@
 			<nav class="top">
 				<span class="tel">理财热线：400-888-8888</span>
 				<ul>
-					<li><a href="#">登录</a></li>
-					<li><a href="#">快速注册</a></li>
+					<li><a href="${pageContext.request.contextPath}/user_loginPage.action">登录</a></li>
+					<li><a href="${pageContext.request.contextPath}/user_registPage.action">快速注册</a></li>
 					<li><a href="#">关于</a></li>
 					<li><a href="#">帮助</a></li>
 					<li><a href="#">APP下载</a></li>

@@ -25,8 +25,9 @@ public class UserServiceImpl implements UserService {
 	}
 	
 	//登陆方法
-	public boolean login(User user) {
-		return false;
+	public User login(User user) {
+		
+		return userDao.login(user);
 		
 	}
 

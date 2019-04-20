@@ -1,7 +1,7 @@
 package cn.edu.hzvtc.dao.impl;
 import java.util.List;
 
-import org.hibernate.Query;
+
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
 import cn.edu.hzvtc.dao.UserDao;
@@ -25,8 +25,17 @@ public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
 	public void save(User user) {
 		this.getHibernateTemplate().save(user);
 	}
-	
-	
+
+	//用户登录的方法
+	public User login(User user) {
+		String hql = "from User where name = ? and password = ?";
+		List<User> list = (List<User>) this.getHibernateTemplate().find(hql, user.getName(),user.getPassword());
+		if(list != null && list.size() >0) {
+			return list.get(0);
+		}
+		return null;
+		
+	}
 	
 	
 	

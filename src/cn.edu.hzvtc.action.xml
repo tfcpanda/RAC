@@ -7,6 +7,7 @@
 	<import resource="cn.edu.hzvtc.service.xml" />
 	<!-- 首页访问Action -->
 	<bean id="IndexAction" class="cn.edu.hzvtc.action.IndexAction" 	scope="prototype"> 
+		<property name="productService" ref="productService"></property>
 	</bean>
 	
 	<!-- ation 配置 -->
@@ -21,10 +22,10 @@
 		<property name="userService" ref="userService"></property>
 	</bean>
 	
-	<!-- 页面显示 -->
-	<bean id="InfoAction" class="cn.edu.hzvtc.action.InfoAction"
+	<!-- 产品的Action -->
+	<bean id="ProductAction" class="cn.edu.hzvtc.action.ProductAction"
 		scope="prototype">
-		<property name="infoService" ref="infoService"></property>
+		<property name="productService" ref="productService"></property>
 	</bean>
 	
 </beans>

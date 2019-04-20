@@ -1,43 +1,61 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
-<html lang="en">
+<%@taglib prefix="s" uri="/struts-tags"%>
+<%@ include file="../pub/top.jsp"%>
+<html lang="zh-CN">
 <head>
-	<!-- Meta tags -->
-	<title>登录</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- stylesheets -->
-	<link rel="stylesheet" href="../css/font-awesome.css">
-	<link rel="stylesheet" href="../css/style.css">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<!--强制IE最高版本加载-->
+<title>红杏资本投资网站</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/normalize.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/main-front.css" />
 
 </head>
 <body>
-	<div class="agile-login">
-		<h1>红杏资本</h1>
-		<div class="wrapper">
-			<h2>登录</h2>
-			<div class="w3ls-form">
-				<form action="use-login" method="post">
-					<label>用户名</label>
-					<input type="text" name="user.id" placeholder="User" required/>
-					<label>密码</label>
-					<input type="text" name="user.passWord" placeholder="Password" required />
-					<a href="#" class="pass">Forgot Password ?</a>
-					<input type="submit" value="登录" />
-				</form>
-			</div>
-			
-			<div class="agile-icons">
-				<a href="#"><span class="fa fa-twitter" aria-hidden="true"></span></a>
-				<a href="#"><span class="fa fa-facebook"></span></a>
-				<a href="#"><span class="fa fa-pinterest-p"></span></a>
-			</div>
-		</div>
-		<br>
-		<div class="copyright">
-		<p>© 2017  <a href="#">红杏资本</a></p> 
-	</div>
-	</div>
-	
+
+	<form method="post"
+		action="${pageContext.request.contextPath}/user_login.action">
+		<table width="100%">
+			<tr>
+				<th colspan="6" ALIGN=CENTER><font size="6">用户登录</font></th>
+			</tr>
+
+			<tr>
+				<td colspan="3">
+					<hr>
+				</td>
+			</tr>
+
+			<tr>
+				<td width="400"></td>
+				<td ALIGN=CENTER BGCOLOR="#ffffff">
+					<table width="400" cellpadding="4">
+						<tr>
+							<td ALIGN=RIGHT><font size="3" face="微软雅黑">用户名</font></td>
+							<td ALIGN=LEFT><input tyoe="texe" name="name"></td>
+						</tr>
+						<tr>
+							<td ALIGN=RIGHT><font size="3" face="微软雅黑">密码</font></td>
+							<td ALIGN=LEFT><input type="text" name="password"></td>
+						</tr>
+					</table>
+				</td>
+				<td width="400"></td>
+			</tr>
+			<tr>
+				<td width="400"></td>
+				<td ALIGN=CENTER BGCOLOR="#ffffff">
+					<table width="400" cellpadding="4">
+						<tr>
+							<td ALIGN="center" colspan="3"><input type="submit"
+								value="登录">
+						</tr>
+					</table>
+		</table>
+	</form>
+	<%@ include file="../pub/bottom.jsp"%>
 </body>
 </html>
