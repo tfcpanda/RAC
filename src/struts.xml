@@ -9,11 +9,12 @@
 		<action name="index" class="IndexAction">
 			<result name="index">/front/index.jsp</result>
 		</action>
-		
-	
+
+
 	</package>
 
-	 <include file="struts-user.xml"></include> 
-
+	<include file="struts-user.xml"></include>
+	<include file="struts-product.xml"></include>
+		<include file="struts-back.xml"></include>
 </struts>
 

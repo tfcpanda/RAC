@@ -22,7 +22,7 @@ public class EmployeeDaoImpl extends BaseDaoImpl<Employee> implements EmployeeDa
 		String hql = "SELECT count(e.id) FROM Employee e";
 		return ((Long) getSession().createQuery(hql).uniqueResult()).intValue();
 	}
-	
+
 	public Employee getEmployeeByEmployeeName(String employeeName) {
 		String hql = "FROM Employee e WHERE e.employeeName = ?";
 		Query query = getSession().createQuery(hql).setString(0,
@@ -36,16 +36,12 @@ public class EmployeeDaoImpl extends BaseDaoImpl<Employee> implements EmployeeDa
 		return (Employee) getSession().createQuery(hql).setInteger(0, id)
 				.uniqueResult();
 	}
-	
+
 	public void batchDelete(String hql,String[] id) {
-		 Query query = getSession().createQuery(hql);
-	        query.executeUpdate();
-	    }
+		Query query = getSession().createQuery(hql);
+		query.executeUpdate();
+	}
 	@Override
 	public void save(Employee employee) {
-		
-		
 	}
-	
-	
 }	

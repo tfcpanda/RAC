@@ -87,7 +87,7 @@
 			<div class="item clearfix">
 				<s:iterator var="c" value="#session.clist">
 					<h3>
-						<em><s:property value="#c.name" /></em>
+						<a href="${pageContext.request.contextPath}/product_findById.action?id=<s:property value="#c.id"/>"><em><s:property value="#c.name" /></em></a>
 					</h3>
 					<div class="info">
 						<p>
