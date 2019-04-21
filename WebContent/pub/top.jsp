@@ -1,31 +1,42 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <html>
 <body>
 	<header>
-		<nav class="top">
-			<span class="tel">理财热线：400-888-8888</span>
-			<ul>
+	<nav class="top">
+		<span class="tel">理财热线：400-888-8888</span>
+		<ul>
+			<s:if test="#session.existUser == null">
 				<li><a
 					href="${pageContext.request.contextPath}/user_loginPage.action">登录</a></li>
 				<li><a
 					href="${pageContext.request.contextPath}/user_registPage.action">快速注册</a></li>
-				<li><a href="#">关于</a></li>
-				<li><a href="#">帮助</a></li>
-				<li><a href="#">APP下载</a></li>
-			</ul>
-		</nav>
-		<nav class="main">
-			<a href="#" class="brand"><img
-				src="${pageContext.request.contextPath}/img/logo.png" alt="回到首页" /></a>
-			<ul>
-				<li><a href="#">首页</a></li>
-				<li><a href="#">理财频道</a></li>
-				<li><a href="#">投资频道</a></li>
-				<li><a href="#">新手专区</a></li>
-				<li><a href="#">安全保障</a></li>
-			</ul>
-		</nav>
-	</header>
+			</s:if>
+			<s:else>
+				<li><s:property value="#session.existUser.name" /></li>
+				<li><a href="${pageContext.request.contextPath}/order_orderPage.action">我的订单</a></li>
+				<!-- 销毁session -->
+				<li><a
+					href="${pageContext.request.contextPath}/user_quit.action">退出</a></li>
+			</s:else>
+
+			<li><a href="#">关于</a></li>
+			<li><a href="#">帮助</a></li>
+			<li><a href="#">APP下载</a></li>
+		</ul>
+	</nav>
+	<nav class="main">
+		<a href="#" class="brand"><img
+			src="${pageContext.request.contextPath}/img/logo.png" alt="回到首页" /></a>
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">理财频道</a></li>
+			<li><a href="#">投资频道</a></li>
+			<li><a href="#">新手专区</a></li>
+			<li><a href="#">安全保障</a></li>
+		</ul>
+	</nav>
+</header>
 	<!--中间部分-->
 	<div class="container">
 		<section class="transaction">
@@ -45,5 +56,4 @@
 		</section>
 	</div>
 </body>
-
 </html>

@@ -21,5 +21,10 @@
 	<bean id="productDao" class="cn.edu.hzvtc.dao.impl.ProductDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
+	
+	<!-- 订单配置 -->
+	<bean id="orderDao" class="cn.edu.hzvtc.dao.impl.OrderDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
 
 </beans>

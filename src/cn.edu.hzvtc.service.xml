@@ -27,4 +27,10 @@
 		class="cn.edu.hzvtc.service.impl.ProductServiceImpl">
 		<property name="productDao" ref="productDao"></property>
 	</bean>
+	
+	<!-- 订单配置 -->
+	<bean id="orderService"
+		class="cn.edu.hzvtc.service.impl.OrderServiceImpl">
+		<property name="orderDao" ref="orderDao"></property>
+	</bean>
 </beans>

@@ -28,4 +28,10 @@
 		<property name="productService" ref="productService"></property>
 	</bean>
 	
+	<!-- 订单的Actin -->
+	<bean id="OrderAction" class="cn.edu.hzvtc.action.OrderAction"
+		scope="prototype">
+		<property name="orderService" ref="orderService"></property>
+	</bean>
+	
 </beans>
