@@ -13,6 +13,6 @@
 	<include file="struts-user.xml"></include>
 	<include file="struts-product.xml"></include>
 	<include file="struts-back.xml"></include>
-	<include file="struts-order.xml"></include>
+	<include file="struts-car.xml"></include>
 </struts>
 

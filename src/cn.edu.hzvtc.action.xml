@@ -29,9 +29,10 @@
 	</bean>
 	
 	<!-- 订单的Actin -->
-	<bean id="OrderAction" class="cn.edu.hzvtc.action.OrderAction"
+	<bean id="CarAction" class="cn.edu.hzvtc.action.CarAction"
 		scope="prototype">
-		<property name="orderService" ref="orderService"></property>
+		<property name="carService" ref="carService"></property>
+		<property name="productService" ref="productService"></property>
 	</bean>
 	
 </beans>

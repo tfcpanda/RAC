@@ -1,5 +1,5 @@
 package cn.edu.hzvtc.entity;
-// Generated Apr 20, 2019 3:37:47 PM by Hibernate Tools 4.3.5.Final
+// Generated Apr 23, 2019 9:45:27 PM by Hibernate Tools 4.3.5.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -21,7 +21,7 @@ public class Product implements java.io.Serializable {
 	private String name;
 	private Integer price;
 	private String description;
-	private Set<Orderitem> orderitems = new HashSet<Orderitem>(0);
+	private Set<Caritem> caritems = new HashSet<Caritem>(0);
 
 	public Product() {
 	}
@@ -30,12 +30,12 @@ public class Product implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public Product(int id, String name, Integer price, String description, Set<Orderitem> orderitems) {
+	public Product(int id, String name, Integer price, String description, Set<Caritem> caritems) {
 		this.id = id;
 		this.name = name;
 		this.price = price;
 		this.description = description;
-		this.orderitems = orderitems;
+		this.caritems = caritems;
 	}
 
 	@Id
@@ -77,12 +77,12 @@ public class Product implements java.io.Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "product")
-	public Set<Orderitem> getOrderitems() {
-		return this.orderitems;
+	public Set<Caritem> getCaritems() {
+		return this.caritems;
 	}
 
-	public void setOrderitems(Set<Orderitem> orderitems) {
-		this.orderitems = orderitems;
+	public void setCaritems(Set<Caritem> caritems) {
+		this.caritems = caritems;
 	}
 
 }

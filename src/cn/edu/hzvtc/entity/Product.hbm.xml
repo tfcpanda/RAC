@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Apr 20, 2019 3:37:47 PM by Hibernate Tools 4.3.5.Final -->
+<!-- Generated Apr 23, 2019 9:45:28 PM by Hibernate Tools 4.3.5.Final -->
 <hibernate-mapping>
     <class name="cn.edu.hzvtc.entity.Product" table="product" catalog="rac" optimistic-lock="version">
         <id name="id" type="int">
@@ -23,13 +23,13 @@
                 <comment>?&#168;&#178;?&#161;&#164;???&#168;&#168;??</comment>
             </column>
         </property>
-        <set name="orderitems" table="orderitem" inverse="true" lazy="true" fetch="select">
+        <set name="caritems" table="caritem" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="PRODUCT_ID">
                     <comment>???&#161;&#164;ID?&#161;&#167;???&#168;&#185;??</comment>
                 </column>
             </key>
-            <one-to-many class="cn.edu.hzvtc.entity.Orderitem" />
+            <one-to-many class="cn.edu.hzvtc.entity.Caritem" />
         </set>
     </class>
 </hibernate-mapping>

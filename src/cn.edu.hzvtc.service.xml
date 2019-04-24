@@ -29,8 +29,8 @@
 	</bean>
 	
 	<!-- 订单配置 -->
-	<bean id="orderService"
-		class="cn.edu.hzvtc.service.impl.OrderServiceImpl">
-		<property name="orderDao" ref="orderDao"></property>
+	<bean id="carService"
+		class="cn.edu.hzvtc.service.impl.CarServiceImpl">
+		<property name="carDao" ref="carDao"></property>
 	</bean>
 </beans>

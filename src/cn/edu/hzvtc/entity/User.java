@@ -1,5 +1,5 @@
 package cn.edu.hzvtc.entity;
-// Generated Apr 20, 2019 3:37:47 PM by Hibernate Tools 4.3.5.Final
+// Generated Apr 23, 2019 9:45:27 PM by Hibernate Tools 4.3.5.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -22,23 +22,28 @@ public class User implements java.io.Serializable {
 	private Integer id;
 	private String password;
 	private String name;
-	private Integer phone;
+	private int phone;
 	private String email;
-	private Integer money;
+	private int money;
 	private String actualname;
-	private Integer idcard;
+	private int idcard;
 	private Set<Order> orders = new HashSet<Order>(0);
 
 	public User() {
 	}
 
-	public User(String password, String name) {
+	public User(String password, String name, int phone, String email, int money, String actualname, int idcard) {
 		this.password = password;
 		this.name = name;
+		this.phone = phone;
+		this.email = email;
+		this.money = money;
+		this.actualname = actualname;
+		this.idcard = idcard;
 	}
 
-	public User(String password, String name, Integer phone, String email, Integer money, String actualname,
-			Integer idcard, Set<Order> orders) {
+	public User(String password, String name, int phone, String email, int money, String actualname, int idcard,
+			Set<Order> orders) {
 		this.password = password;
 		this.name = name;
 		this.phone = phone;
@@ -79,16 +84,16 @@ public class User implements java.io.Serializable {
 		this.name = name;
 	}
 
-	@Column(name = "PHONE")
-	public Integer getPhone() {
+	@Column(name = "PHONE", nullable = false)
+	public int getPhone() {
 		return this.phone;
 	}
 
-	public void setPhone(Integer phone) {
+	public void setPhone(int phone) {
 		this.phone = phone;
 	}
 
-	@Column(name = "EMAIL")
+	@Column(name = "EMAIL", nullable = false)
 	public String getEmail() {
 		return this.email;
 	}
@@ -97,16 +102,16 @@ public class User implements java.io.Serializable {
 		this.email = email;
 	}
 
-	@Column(name = "MONEY")
-	public Integer getMoney() {
+	@Column(name = "MONEY", nullable = false)
+	public int getMoney() {
 		return this.money;
 	}
 
-	public void setMoney(Integer money) {
+	public void setMoney(int money) {
 		this.money = money;
 	}
 
-	@Column(name = "ACTUALNAME")
+	@Column(name = "ACTUALNAME", nullable = false)
 	public String getActualname() {
 		return this.actualname;
 	}
@@ -115,12 +120,12 @@ public class User implements java.io.Serializable {
 		this.actualname = actualname;
 	}
 
-	@Column(name = "IDCARD")
-	public Integer getIdcard() {
+	@Column(name = "IDCARD", nullable = false)
+	public int getIdcard() {
 		return this.idcard;
 	}
 
-	public void setIdcard(Integer idcard) {
+	public void setIdcard(int idcard) {
 		this.idcard = idcard;
 	}
 

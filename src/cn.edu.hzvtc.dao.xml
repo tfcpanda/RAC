@@ -23,7 +23,7 @@
 	</bean>
 	
 	<!-- 订单配置 -->
-	<bean id="orderDao" class="cn.edu.hzvtc.dao.impl.OrderDaoImpl">
+	<bean id="carDao" class="cn.edu.hzvtc.dao.impl.CarDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 

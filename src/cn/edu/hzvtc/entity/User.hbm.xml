@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Apr 20, 2019 3:37:47 PM by Hibernate Tools 4.3.5.Final -->
+<!-- Generated Apr 23, 2019 9:45:28 PM by Hibernate Tools 4.3.5.Final -->
 <hibernate-mapping>
     <class name="cn.edu.hzvtc.entity.User" table="user" catalog="rac" optimistic-lock="version">
         <id name="id" type="java.lang.Integer">
@@ -18,28 +18,28 @@
                 <comment>&#211;&#195;&#187;&#167;&#195;&#251;</comment>
             </column>
         </property>
-        <property name="phone" type="java.lang.Integer">
-            <column name="PHONE">
+        <property name="phone" type="int">
+            <column name="PHONE" not-null="true">
                 <comment>&#211;&#195;&#187;&#167;&#202;&#214;&#187;&#250;&#186;&#197;</comment>
             </column>
         </property>
         <property name="email" type="string">
-            <column name="EMAIL">
+            <column name="EMAIL" not-null="true">
                 <comment>&#211;&#195;&#187;&#167;&#211;&#202;&#207;&#228;</comment>
             </column>
         </property>
-        <property name="money" type="java.lang.Integer">
-            <column name="MONEY">
+        <property name="money" type="int">
+            <column name="MONEY" not-null="true">
                 <comment>&#211;&#195;&#187;&#167;&#215;&#202;&#189;&#240;</comment>
             </column>
         </property>
         <property name="actualname" type="string">
-            <column name="ACTUALNAME">
+            <column name="ACTUALNAME" not-null="true">
                 <comment>&#213;&#230;&#202;&#181;&#208;&#213;&#195;&#251;</comment>
             </column>
         </property>
-        <property name="idcard" type="java.lang.Integer">
-            <column name="IDCARD">
+        <property name="idcard" type="int">
+            <column name="IDCARD" not-null="true">
                 <comment>&#201;&#237;&#183;&#221;&#214;&#164;</comment>
             </column>
         </property>
