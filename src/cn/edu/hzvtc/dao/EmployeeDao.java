@@ -18,6 +18,8 @@ public interface EmployeeDao extends BaseDao<Employee>{
 	public Employee get(Integer id) ;
 	
 	public void batchDelete(String hql,String[] id) ;
+
+	public boolean login(Employee employee);
 	
-	public void save(Employee employee);
+	
 }	

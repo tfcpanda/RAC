@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "struts-2.1.dtd" >
 <struts>
-	<package name="a" namespace="/" extends="struts-default,json-default">
+	<package name="emp" namespace="/"
+		extends="struts-default,json-default">
 		<action name="emp-*" class="employeeAction" method="{1}">
 			<result name="list">/back/emp-list.jsp</result>
 			<result name="success" type="redirect">/emp-list</result>
+			<result name="fail">/back/login-fail.jsp</result>
 			<result name="ajax-success" type="json"></result>
 			<result name="input">/back/emp-input.jsp</result>
 			<result name="deleteAll" type="redirect">/emp-list</result>

@@ -7,10 +7,13 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
+
+
 import cn.edu.hzvtc.entity.Employee;
 import cn.edu.hzvtc.entity.PageBean;
 import cn.edu.hzvtc.service.DepartmentService;
 import cn.edu.hzvtc.service.EmployeeService;
+
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -26,6 +29,9 @@ public class EmployeeAction extends ActionSupport implements SessionAware,Reques
 	private Employee employee;
 	private String employeeName;
 	private String checkTnum;	 //批量删除的id值
+	
+
+	
 	/*
 	 * 批量删除的方法
 	 */
@@ -69,7 +75,6 @@ public class EmployeeAction extends ActionSupport implements SessionAware,Reques
 	public void setEmployee(Employee employee) {
 		this.employee = employee;
 	}
-	
 	public String save() {
 		if (employee.getId() == null) {
 			employee.setCreateTime(new Date());

@@ -6,10 +6,9 @@ import cn.edu.hzvtc.dao.EmployeeDao;
 import cn.edu.hzvtc.entity.Employee;
 import cn.edu.hzvtc.service.EmployeeService;
 
-public class EmployeeServiceImpl implements EmployeeService {
+public class EmployeeServiceImpl implements EmployeeService{
 	//业务逻
 	private EmployeeDao employeeDao;
-	
 	public void setEmployeeDao(EmployeeDao employeeDao) {
 		this.employeeDao = employeeDao;
 	}
@@ -40,6 +39,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public Employee get(Integer id) {
 		return employeeDao.get(id);
 	}
+	//批量删除
 	public void batchDeleteAsk(String [] id){
         String hql = "";
            for(int i=0;i<id.length;i++) {
@@ -52,4 +52,8 @@ public class EmployeeServiceImpl implements EmployeeService {
           hql= "delete from Employee where "+hql;
        employeeDao.batchDelete(hql,id);
    }
+	//登录方法
+	public boolean login(Employee employee) throws Exception {
+		return this.employeeDao.login(employee);
+	}
 }

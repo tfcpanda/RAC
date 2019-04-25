@@ -6,7 +6,6 @@ import cn.edu.hzvtc.dao.DepartmentDao;
 import cn.edu.hzvtc.entity.Department;
 import cn.edu.hzvtc.service.DepartmentService;
 
-
 public class DepartmentServiceImpl implements DepartmentService{
 	//创建department类
 	private DepartmentDao departmentDao;

@@ -10,8 +10,8 @@
 		<property name="productService" ref="productService"></property>
 	</bean>
 	
-	<!-- ation 配置 -->
-	<bean id="EmployeeAction" class="cn.edu.hzvtc.action.EmployeeAction" scope="prototype">
+	<bean id="employeeAction" class="cn.edu.hzvtc.action.EmployeeAction"
+		scope="prototype">
 		<property name="employeeService" ref="employeeService"></property>
 		<property name="departmentService" ref="departmentService"></property>
 	</bean>

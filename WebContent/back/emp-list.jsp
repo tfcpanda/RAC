@@ -6,9 +6,9 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/css/";
 %>
+
 <!doctype html>
 <html>
-
 <head>
 <base href="<%=basePath%>">
 <meta charset="UTF-8">
@@ -23,7 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body>
 	<%@ include file="../pub/topbar-back.jsp"%> 
 	<div class="container clearfix">
-		 <%@ include file="../pub/sidebar-back.jsp"%>  
+		<%@ include file="../pub/sidebar-back.jsp"%> 
 		<!--/sidebar-->
 		<div class="main-wrap">
 

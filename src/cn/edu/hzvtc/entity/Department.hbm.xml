@@ -1,27 +1,13 @@
-<?xml version="1.0"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Apr 23, 2019 9:45:28 PM by Hibernate Tools 4.3.5.Final -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
 <hibernate-mapping>
-    <class name="cn.edu.hzvtc.entity.Department" table="department" catalog="rac" optimistic-lock="version">
-        <id name="id" type="java.lang.Integer">
-            <column name="ID" />
-            <generator class="identity" />
-        </id>
-        <property name="departmentName" type="string">
-            <column name="DEPARTMENT_NAME" />
-        </property>
-        <set name="employees" table="employee" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="DEPARTMENT_ID" />
-            </key>
-            <one-to-many class="cn.edu.hzvtc.entity.Employee" />
-        </set>
-        <set name="employees_1" table="employee" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="DEPARTMENT_ID" />
-            </key>
-            <one-to-many class="cn.edu.hzvtc.entity.Employee" />
-        </set>
-    </class>
+	<class name="cn.edu.hzvtc.entity.Department" table="DEPARTMENTS">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+		<property name="departmentName" type="java.lang.String">
+			<column name="DEPARTMENT_NAME" />
+		</property>
+	</class>
 </hibernate-mapping>

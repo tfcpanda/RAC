@@ -12,14 +12,12 @@
 		<property name="userDao" ref="userDao" />
 	</bean>
 
-	<!-- 后台配置 -->
-	<bean id="employeeService"
-		class="cn.edu.hzvtc.service.impl.EmployeeServiceImpl">
+		<!-- service -->
+	<bean id="employeeService" class="cn.edu.hzvtc.service.impl.EmployeeServiceImpl">
 		<property name="employeeDao" ref="employeeDao"></property>
 	</bean>
-
-	<bean id="departmentService"
-		class="cn.edu.hzvtc.service.impl.DepartmentServiceImpl">
+	
+	<bean id="departmentService" class="cn.edu.hzvtc.service.impl.DepartmentServiceImpl">
 		<property name="departmentDao" ref="departmentDao"></property>
 	</bean>
 
