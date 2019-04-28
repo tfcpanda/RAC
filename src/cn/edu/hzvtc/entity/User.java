@@ -1,5 +1,5 @@
 package cn.edu.hzvtc.entity;
-// Generated Apr 23, 2019 9:45:27 PM by Hibernate Tools 4.3.5.Final
+// Generated Apr 28, 2019 12:38:37 PM by Hibernate Tools 4.3.5.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -27,6 +27,7 @@ public class User implements java.io.Serializable {
 	private int money;
 	private String actualname;
 	private int idcard;
+	private Integer comment;
 	private Set<Order> orders = new HashSet<Order>(0);
 
 	public User() {
@@ -43,7 +44,7 @@ public class User implements java.io.Serializable {
 	}
 
 	public User(String password, String name, int phone, String email, int money, String actualname, int idcard,
-			Set<Order> orders) {
+			Integer comment, Set<Order> orders) {
 		this.password = password;
 		this.name = name;
 		this.phone = phone;
@@ -51,6 +52,7 @@ public class User implements java.io.Serializable {
 		this.money = money;
 		this.actualname = actualname;
 		this.idcard = idcard;
+		this.comment = comment;
 		this.orders = orders;
 	}
 
@@ -127,6 +129,15 @@ public class User implements java.io.Serializable {
 
 	public void setIdcard(int idcard) {
 		this.idcard = idcard;
+	}
+
+	@Column(name = "COMMENT")
+	public Integer getComment() {
+		return this.comment;
+	}
+
+	public void setComment(Integer comment) {
+		this.comment = comment;
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "user")

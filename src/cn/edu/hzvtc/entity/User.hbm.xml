@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Apr 23, 2019 9:45:28 PM by Hibernate Tools 4.3.5.Final -->
+<!-- Generated Apr 28, 2019 12:38:38 PM by Hibernate Tools 4.3.5.Final -->
 <hibernate-mapping>
     <class name="cn.edu.hzvtc.entity.User" table="user" catalog="rac" optimistic-lock="version">
         <id name="id" type="java.lang.Integer">
@@ -41,6 +41,11 @@
         <property name="idcard" type="int">
             <column name="IDCARD" not-null="true">
                 <comment>&#201;&#237;&#183;&#221;&#214;&#164;</comment>
+            </column>
+        </property>
+        <property name="comment" type="java.lang.Integer">
+            <column name="COMMENT">
+                <comment>&#201;&#237;&#183;&#221;&#214;&#164;&#186;&#197;</comment>
             </column>
         </property>
         <set name="orders" table="order" inverse="true" lazy="true" fetch="select">

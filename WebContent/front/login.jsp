@@ -39,7 +39,7 @@
 						</tr>
 						<tr>
 							<td ALIGN=RIGHT><font size="3" face="微软雅黑">密码</font></td>
-							<td ALIGN=LEFT><input type="text" name="password"></td>
+							<td ALIGN=LEFT><input type="password" name="password"></td>
 						</tr>
 					</table>
 				</td>
