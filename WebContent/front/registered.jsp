@@ -56,10 +56,10 @@
 					<td ALIGN=RIGHT><font size="3" face="微软雅黑">真实姓名</font></td>
 					<td ALIGN=LEFT><input type="texe" name="actualname"></td>
 				</tr>
-				<tr>
+				<!-- <tr >
 					<td ALIGN=RIGHT><font size="3" face="微软雅黑">身份证号</font></td>
 					<td ALIGN=LEFT><input type="texe" name="idcard"></td>
-				</tr>
+				</tr> -->
 					</table>
 				</td>
 				<td width="400"></td>

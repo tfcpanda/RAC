@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "struts-2.1.dtd" >
+<struts>
+	<package name="product" namespace="/"
+		extends="struts-default,json-default">
+		<action name="product_*" class="ProductAction" method="{1}">
+			<result name="findById">/front/product.jsp</result>
+			<result name="backProduct">/back/product-list.jsp</result>
+		</action>
+	</package>
+</struts>

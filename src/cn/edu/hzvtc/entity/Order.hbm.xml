@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 28, 2019 12:38:38 PM by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="cn.edu.hzvtc.entity.Order" table="order" catalog="rac" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="user" class="cn.edu.hzvtc.entity.User" fetch="select">
+            <column name="USER_ID">
+                <comment>????????ID</comment>
+            </column>
+        </many-to-one>
+        <property name="time" type="date">
+            <column name="TIME" length="10">
+                <comment>???????&#161;&#192;??</comment>
+            </column>
+        </property>
+        <property name="money" type="java.lang.Integer">
+            <column name="MONEY">
+                <comment>????????</comment>
+            </column>
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="STATUS">
+                <comment>??????&#161;&#193;???</comment>
+            </column>
+        </property>
+        <property name="address" type="string">
+            <column name="ADDRESS">
+                <comment>?????????&#161;&#164;</comment>
+            </column>
+        </property>
+        <property name="phone" type="java.lang.Integer">
+            <column name="PHONE">
+                <comment>?????????&#161;&#227;</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="NAME">
+                <comment>??????????</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

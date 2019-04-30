@@ -31,4 +31,11 @@
 		class="cn.edu.hzvtc.service.impl.CarServiceImpl">
 		<property name="carDao" ref="carDao"></property>
 	</bean>
+	
+	<!--管理员service配置 -->
+	<bean id="adminService"
+		class="cn.edu.hzvtc.service.impl.AdminServiceImpl">
+		<property name="adminDao" ref="adminDao" />
+	</bean>
+	
 </beans>

@@ -26,4 +26,8 @@
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 
+	<!--管理员dao配置 -->
+	<bean id="adminDao" class="cn.edu.hzvtc.dao.impl.AdminDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
 </beans>

@@ -31,10 +31,6 @@ public class UserServiceImpl implements UserService {
 		
 	}
 
-	@Override
-	public User findEntityByname(String name) {
-		return userDao.findEntityByname(name);
-	}
 
 	/*
 	 * 业务层完成用户注册代码

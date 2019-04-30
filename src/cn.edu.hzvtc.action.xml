@@ -28,11 +28,16 @@
 		<property name="productService" ref="productService"></property>
 	</bean>
 	
-	<!-- 订单的Actin -->
+	<!-- 订单的购物车 -->
 	<bean id="CarAction" class="cn.edu.hzvtc.action.CarAction"
 		scope="prototype">
 		<property name="carService" ref="carService"></property>
 		<property name="productService" ref="productService"></property>
 	</bean>
 	
+	<!-- 用户模块的Action -->
+	<bean id="AdminAction" class="cn.edu.hzvtc.action.AdminAction"
+		scope="prototype">
+		<property name="adminService" ref="adminService"></property>
+	</bean>
 </beans>

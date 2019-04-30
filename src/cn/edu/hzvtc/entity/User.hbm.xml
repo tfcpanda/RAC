@@ -39,7 +39,7 @@
             </column>
         </property>
         <property name="idcard" type="int">
-            <column name="IDCARD" not-null="true">
+            <column name="IDCARD" not-null="true" length="225">
                 <comment>&#201;&#237;&#183;&#221;&#214;&#164;</comment>
             </column>
         </property>

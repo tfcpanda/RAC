@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 28, 2019 12:38:38 PM by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="cn.edu.hzvtc.entity.CartItem" table="caritem" catalog="rac" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="product" class="cn.edu.hzvtc.entity.Product" fetch="select">
+            <column name="PRODUCT_ID">
+                <comment>???&#161;&#164;ID?&#161;&#167;???&#168;&#185;??</comment>
+            </column>
+        </many-to-one>
+        <property name="number" type="java.lang.Integer">
+            <column name="number">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="sum" type="java.lang.Integer">
+            <column name="SUM">
+                <comment>&#161;&#193;???</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

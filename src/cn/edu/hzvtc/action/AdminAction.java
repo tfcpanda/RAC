@@ -4,56 +4,40 @@ import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
+import cn.edu.hzvtc.entity.Admin;
+import cn.edu.hzvtc.service.AdminService;
 
-import cn.edu.hzvtc.entity.User;
-import cn.edu.hzvtc.service.UserService;
-/*
- * 用户模块的Action类
- */
 
-public class UserAction extends ActionSupport implements ModelDriven<User>{
+
+
+public class AdminAction extends ActionSupport implements ModelDriven<Admin>{
 
 	private static final long serialVersionUID = 1L;
 	//模型驱动要使用的对象
-	private User user = new User();
+	private Admin admin = new Admin();
 	
-	public User getModel() {
-		return user;
+	public Admin getModel() {
+		return admin;
 	}
 	/*
 	 * 跳转到注册页面的执行方法
 	 */
-	public String registPage() {
-		return "registPage";
+	public String adminPage() {
+		return "admin";
 	}
 	
 	//注入userService
-	private UserService userService;
+	private AdminService adminService;
 		
-	public void setUserService(UserService userService) {
-		this.userService = userService;
-	}
-	
-	/*
-	 * 用户注册方法
-	 */
-	public String regist() {
-		userService.save(user);
-		return "regist";
-	}
-	
-	/*
-	 * 跳转到登录页面的执行方法
-	 */
-	public String loginPage() {
-		return "loginPage";
+	public void setAdminService(AdminService adminService) {
+		this.adminService = adminService;
 	}
 	
 	/*
 	 * 用户登录的方法
 	 */
 	public String login() {
-		User existUser= userService.login(user);
+		Admin existUser= adminService.login(admin);
 		if(existUser == null) {
 			//登录失败
 			this.addActionError("登录失败");
@@ -76,5 +60,4 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 		ServletActionContext.getRequest().getSession().invalidate();
 		return "quit";
 	}
-	
-	}
+}

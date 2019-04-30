@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "struts-2.1.dtd" >
+<struts>
+	<package name="user" namespace="/"
+		extends="struts-default,json-default">
+		<action name="user_*" class="UserAction" method="{1}">
+			<result name="registPage">/front/registered.jsp</result>
+			<result name="regist">/front/index.jsp</result>
+			<result name="loginPage">/front/login.jsp</result>
+			<result name="login">/front/login.jsp</result>
+			<result name="loginSuccess" type="redirectAction">index</result>
+			<result name="quit" type="redirectAction">index</result>
+		</action>
+	</package>
+</struts>

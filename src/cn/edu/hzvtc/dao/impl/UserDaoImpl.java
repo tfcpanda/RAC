@@ -11,16 +11,6 @@ import cn.edu.hzvtc.entity.User;
 
 public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
 	
-	//按名字查询    没有做
-	public User findEntityByname(String name) {
-		String hql = "from User where name = ?";
-		List<User> list = (List<User>) this.getHibernateTemplate().find(hql, name);
-		if(list != null && list.size() > 0  ) {
-			return list.get(0);
-		}
-		return null;
-	}
-
 	//使用hibernate模板注册账号。
 	public void save(User user) {
 		this.getHibernateTemplate().save(user);
