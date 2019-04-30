@@ -25,4 +25,12 @@ public class IndexAction extends ActionSupport{
 		ActionContext.getContext().getSession().put("clist", clist);
 		return "index";
 	}
+	
+	/*
+	 * 执行页面访问的方法
+	 * 查询页面
+	 */
+	public String indexPage() {
+		return "indexPage";
+	}
 }

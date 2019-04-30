@@ -9,8 +9,8 @@
 				<ul class="sub-menu">
 					<li><a href="emp-list"><i class="icon-font">&#xe008;</i>员工信息</a></li>
 					<li><a href="product_backProduct"><i class="icon-font">&#xe006;</i>产品管理</a></li>
-				</ul>
-			</li>
+					<li><a href="admin_adminAll.action"><i class="icon-font">&#xe008;</i>管理员信息</a></li>
+				</ul></li>
 		</ul>
 	</div>
 </div>

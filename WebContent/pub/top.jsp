@@ -26,10 +26,10 @@
 		</ul>
 	</nav>
 	<nav class="main">
-		<a href="#" class="brand"><img
+		<a href="${pageContext.request.contextPath}/index_indexPage.action" class="brand"><img
 			src="${pageContext.request.contextPath}/img/logo.png" alt="回到首页" /></a>
 		<ul>
-			<li><a href="${pageContext.request.contextPath}/.action">首页</a></li>
+			<li><a href="${pageContext.request.contextPath}/index_indexPage.action">首页</a></li>
 			<li><a href="#">理财频道</a></li>
 			<li><a href="#">投资频道</a></li>
 			<li><a href="#">新手专区</a></li>

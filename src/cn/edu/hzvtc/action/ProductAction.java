@@ -32,7 +32,10 @@ public class ProductAction extends ActionSupport implements ModelDriven<Product>
 		product = productService.findById(product.getId());
 		return "findById";
 	}
-
+	
+	/*
+	 * 查询全部
+	 */
 	public String backProduct() {
 		List<Product> clist =  productService.findAll();
 		//将数据放入session的范围

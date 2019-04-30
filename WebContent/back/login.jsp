@@ -7,8 +7,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- stylesheets -->
-	<link rel="stylesheet" href="../css/font-awesome.css">
-	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/font-awesome.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 
 </head>
 <body>
@@ -17,11 +17,11 @@
 		<div class="wrapper">
 			<h2>后台登录</h2>
 			<div class="w3ls-form">
-				<form action="emp-login" method="post">
+				<form action="${pageContext.request.contextPath}/admin_login.action" method="post">
 					<label>用户名</label>
-					<input type="text" name="employee.employeeName" placeholder="User" required/>
+					<input type="text" name="name" placeholder="User" required/>
 					<label>密码</label>
-					<input type="password" name="employee.employeeEmail" placeholder="Password" required />
+					<input type="password" name="password" placeholder="Password" required />
 					<a href="#" class="pass">Forgot Password ?</a>
 					<input type="submit" value="登录" />
 				</form>

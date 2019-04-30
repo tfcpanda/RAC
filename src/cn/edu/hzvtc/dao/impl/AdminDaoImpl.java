@@ -6,6 +6,7 @@ import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
 import cn.edu.hzvtc.dao.AdminDao;
 import cn.edu.hzvtc.entity.Admin;
+import cn.edu.hzvtc.entity.Product;
 
 
 public class AdminDaoImpl extends HibernateDaoSupport implements AdminDao {
@@ -29,6 +30,16 @@ public class AdminDaoImpl extends HibernateDaoSupport implements AdminDao {
 		return null;
 
 	}
+
+
+	@Override
+	public List<Admin> findall() {
+		String hql = "from Admin";
+		List<Admin> list =  (List<Admin>) this.getHibernateTemplate().find(hql);
+		return list;
+	}
+
+
 
 
 }

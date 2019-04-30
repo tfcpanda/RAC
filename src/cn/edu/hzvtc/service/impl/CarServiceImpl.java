@@ -1,7 +1,6 @@
 package cn.edu.hzvtc.service.impl;
 
 import cn.edu.hzvtc.dao.CarDao;
-import cn.edu.hzvtc.dao.UserDao;
 import cn.edu.hzvtc.service.CarService;
 
 public class CarServiceImpl implements CarService {
@@ -13,8 +12,4 @@ public class CarServiceImpl implements CarService {
 	public void setCarDao(CarDao carDao) {
 		this.carDao = carDao;
 	}
-
-
-	
-
 }

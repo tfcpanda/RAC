@@ -6,6 +6,9 @@
 		<action name="car_*" class="CarAction" method="{1}">
 			<result name="carPage">/front/car.jsp</result>
 			<result name="addCart">/front/car.jsp</result>
+			<result name="clearCart">/front/car.jsp</result>
+			<result name="removeCart">/front/car.jsp</result>
+			
 		</action>
 	</package>
 </struts>

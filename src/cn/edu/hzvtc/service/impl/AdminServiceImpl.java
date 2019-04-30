@@ -4,6 +4,7 @@ package cn.edu.hzvtc.service.impl;
 import cn.edu.hzvtc.entity.Admin;
 import cn.edu.hzvtc.service.AdminService;
 
+import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
 
@@ -37,6 +38,11 @@ public class AdminServiceImpl implements AdminService {
 	public void save(Admin admin) {
 		adminDao.save(admin); 
 		
+	}
+
+	@Override
+	public List<Admin> findAll() {
+		return adminDao.findall();
 	}
 	
 }

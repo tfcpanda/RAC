@@ -6,13 +6,18 @@
 	<constant name="struts.devMode" value="true" />
 	<package name="index" namespace="/"
 		extends="struts-default,json-default">
-		<action name="index" class="IndexAction">
+		<action name="index_*" class="IndexAction" method="{1}">
 			<result name="index">/front/index.jsp</result>
+			<result name="indexPage" type="redirectAction">index</result>
 		</action>
 	</package>
+	<include file="struts-order.xml"></include>
+	<include file="struts-admin.xml"></include>
 	<include file="struts-user.xml"></include>
 	<include file="struts-product.xml"></include>
 	<include file="struts-back.xml"></include>
 	<include file="struts-car.xml"></include>
 </struts>
+
+
 

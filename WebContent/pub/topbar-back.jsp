@@ -1,4 +1,5 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <div class="topbar-wrap white">
 		<div class="topbar-inner clearfix">
 			<div class="topbar-logo-wrap clearfix">
@@ -12,9 +13,10 @@
 			</div>
 			<div class="top-info-wrap">
 				<ul class="top-info-list clearfix">
-					<li><a href="#">管理员</a></li>
+					<li><s:property value="#session.existUser.name" /></li>
 					<li><a href="#">修改密码</a></li>
-					<li><a href="#">退出</a></li>
+					<li><a href="${pageContext.request.contextPath}/admin_quit.action">退出</a></li>
+					
 				</ul>
 			</div>
 		</div>

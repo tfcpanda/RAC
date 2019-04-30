@@ -79,7 +79,26 @@ public class CarAction  extends ActionSupport{
 			return cart;
 		}
 
-
-
-
+		/*
+		 * 清空购物车
+		 */
+		public String clearCart() {
+			//获得购物车对象
+			Cart cart = getCart();
+			//清空购物车
+			cart.clearCart();
+			return "clearCart";
+		}
+		
+		/*
+		 * 移除购物车
+		 */
+		public String removeCart() {
+			//获得购物车
+			Cart cart = getCart();
+			//调用购物车中的移除
+			cart.removeCart(id);
+			//返回页面
+			return "removeCart";
+		}
 }

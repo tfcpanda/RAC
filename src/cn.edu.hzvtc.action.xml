@@ -40,4 +40,10 @@
 		scope="prototype">
 		<property name="adminService" ref="adminService"></property>
 	</bean>
+	
+	<!-- 订单的Action -->
+	<bean id="OrderAction" class="cn.edu.hzvtc.action.OrderAction"
+		scope="prototype">
+		
+	</bean>
 </beans>

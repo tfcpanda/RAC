@@ -3,10 +3,11 @@
 <struts>
 	<package name="admin" namespace="/"
 		extends="struts-default,json-default">
-		<action name="admin" class="AdminAction">
+		<action name="admin_*" class="AdminAction" method="{1}">
 			<result name="admin">/back/login.jsp</result>
-			<result name="login">/front/login.jsp</result>
-			<result name="loginSuccess" type="redirectAction">index</result>
+			<result name="adminSuccess" type="redirect">/emp-list</result>
+			<result name="quit">/back/login.jsp</result>
+			<result name="adminAll">/back/admin-list.jsp</result>
 		</action>
 	</package>
 </struts>
