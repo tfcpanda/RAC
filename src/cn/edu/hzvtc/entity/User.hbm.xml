@@ -18,34 +18,23 @@
                 <comment>&#211;&#195;&#187;&#167;&#195;&#251;</comment>
             </column>
         </property>
-        <property name="phone" type="int">
-            <column name="PHONE" not-null="true">
-                <comment>&#211;&#195;&#187;&#167;&#202;&#214;&#187;&#250;&#186;&#197;</comment>
-            </column>
-        </property>
+        <property name="phone" />
+            
         <property name="email" type="string">
             <column name="EMAIL" not-null="true">
                 <comment>&#211;&#195;&#187;&#167;&#211;&#202;&#207;&#228;</comment>
             </column>
         </property>
-        <property name="money" type="int">
-            <column name="MONEY" not-null="true">
-                <comment>&#211;&#195;&#187;&#167;&#215;&#202;&#189;&#240;</comment>
-            </column>
-        </property>
+       
         <property name="actualname" type="string">
             <column name="ACTUALNAME" not-null="true">
                 <comment>&#213;&#230;&#202;&#181;&#208;&#213;&#195;&#251;</comment>
             </column>
         </property>
-        <property name="idcard" type="int">
-            <column name="IDCARD" not-null="true" length="225">
-                <comment>&#201;&#237;&#183;&#221;&#214;&#164;</comment>
-            </column>
-        </property>
-        <property name="comment" type="java.lang.Integer">
-            <column name="COMMENT">
-                <comment>&#201;&#237;&#183;&#221;&#214;&#164;&#186;&#197;</comment>
+      
+         <property name="address" type="string">
+            <column name="ADDRESS" not-null="true">
+                <comment>地址</comment>
             </column>
         </property>
         <set name="orders" table="order" inverse="true" lazy="true" fetch="select">

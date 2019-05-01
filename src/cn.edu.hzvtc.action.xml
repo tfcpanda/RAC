@@ -6,44 +6,45 @@
 	<!-- 导入Bean配置文件 -->
 	<import resource="cn.edu.hzvtc.service.xml" />
 	<!-- 首页访问Action -->
-	<bean id="IndexAction" class="cn.edu.hzvtc.action.IndexAction" 	scope="prototype"> 
+	<bean id="IndexAction" class="cn.edu.hzvtc.action.IndexAction"
+		scope="prototype">
 		<property name="productService" ref="productService"></property>
 	</bean>
-	
-	<bean id="employeeAction" class="cn.edu.hzvtc.action.EmployeeAction"
-		scope="prototype">
+
+	<bean id="employeeAction"
+		class="cn.edu.hzvtc.action.EmployeeAction" scope="prototype">
 		<property name="employeeService" ref="employeeService"></property>
 		<property name="departmentService" ref="departmentService"></property>
 	</bean>
-	
+
 	<!-- 用户模块的Action -->
 	<bean id="UserAction" class="cn.edu.hzvtc.action.UserAction"
 		scope="prototype">
 		<property name="userService" ref="userService"></property>
 	</bean>
-	
+
 	<!-- 产品的Action -->
 	<bean id="ProductAction" class="cn.edu.hzvtc.action.ProductAction"
 		scope="prototype">
 		<property name="productService" ref="productService"></property>
 	</bean>
-	
+
 	<!-- 订单的购物车 -->
 	<bean id="CarAction" class="cn.edu.hzvtc.action.CarAction"
 		scope="prototype">
 		<property name="carService" ref="carService"></property>
 		<property name="productService" ref="productService"></property>
 	</bean>
-	
+
 	<!-- 用户模块的Action -->
 	<bean id="AdminAction" class="cn.edu.hzvtc.action.AdminAction"
 		scope="prototype">
 		<property name="adminService" ref="adminService"></property>
 	</bean>
-	
+
 	<!-- 订单的Action -->
 	<bean id="OrderAction" class="cn.edu.hzvtc.action.OrderAction"
 		scope="prototype">
-		
+		<property name="orderService" ref="orderService"></property>
 	</bean>
 </beans>

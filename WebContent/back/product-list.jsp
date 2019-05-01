@@ -3,22 +3,22 @@
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@taglib prefix="s" uri="/struts-tags"%>
-<%
-	String path = request.getContextPath();
-	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
-			+ path + "/css/";
-%>
+
 
 <!doctype html>
 <html>
 <head>
-<base href="<%=basePath%>">
+
 <meta charset="UTF-8">
 <title>后台管理</title>
-<link rel="stylesheet" type="text/css" href="../css/common.css" />
-<link rel="stylesheet" type="text/css" href="../css/main.css" />
-<script type="text/javascript" src="../js/modernizr.min.js"></script>
-<script type="text/javascript" src="../scripts/jquery-3.3.1.min.js">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/css/common.css" />
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/css/main.css" />
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/js/modernizr.min.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/scripts/jquery-3.3.1.min.js">
 	
 </script>
 </head>
@@ -33,7 +33,7 @@
 			<div class="crumb-wrap">
 				<div class="crumb-list">
 					<i class="icon-font"></i> <a href="index.jsp">首页</a><span
-						class="crumb-step">&gt;</span><span class="crumb-name">员工列表</span>
+						class="crumb-step">&gt;</span><span class="crumb-name">产品列表</span>
 				</div>
 			</div>
 			<div class="search-wrap">
@@ -61,10 +61,8 @@
 				<form name="myform" id="myform" method="post">
 					<div class="result-title">
 						<div class="result-list">
-							<a href=emp-input><i class="icon-font"></i>增加产品</a> <a
-								id="batchDel" href="javascript:void(0)"><i class="icon-font"></i>批量删除</a>
-							<a id="updateOrd" href="javascript:void(0)"><i
-								class="icon-font"></i>更新排序</a>
+							<a href="${pageContext.request.contextPath}/product_addProduct.action"><i
+								class="icon-font"></i>增加产品</a>
 						</div>
 					</div>
 					<div class="result-content">
@@ -103,10 +101,17 @@
 										<td><s:property value="#c.price" /> RMB</td>
 
 										<td><s:property value="#c.description" /></td>
-										<td><a class="delete"
-											href="emp-delete?id=<s:property value="#c.id"/>">删除</a> <input
-											type="hidden" value="<s:property value="#c.name" />"></td>
-										<td><a href="emp-input?id=<s:property value="#c.id"/>">编辑</a></td>
+										<s:if test="#c.status == 1">
+											<td><a
+												href="product_outStock?id=<s:property value="#c.id"/>">下架</a>
+												<input type="hidden" value="<s:property value="#c.name" />"></td>
+										</s:if>
+										<s:else>
+											<td><a
+												href="product_putStock?id=<s:property value="#c.id"/>">已被下架,点击上架</a>
+												<input type="hidden" value="<s:property value="#c.name" />"></td>
+										</s:else>
+										<%-- <td><a href="emp-input?id=<s:property value="#c.id"/>">编辑</a></td> --%>
 									</tr>
 								</s:iterator>
 							</tbody>

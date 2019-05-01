@@ -23,13 +23,11 @@
                 <comment>?&#168;&#178;?&#161;&#164;???&#168;&#168;??</comment>
             </column>
         </property>
-        <set name="caritems" table="caritem" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="PRODUCT_ID">
-                    <comment>???&#161;&#164;ID?&#161;&#167;???&#168;&#185;??</comment>
-                </column>
-            </key>
-            <one-to-many class="cn.edu.hzvtc.entity.CartItem" />
-        </set>
+       
+        <property name="status" type="java.lang.Integer">
+            <column name="status">
+                <comment>下架</comment>
+            </column>
+        </property>
     </class>
 </hibernate-mapping>

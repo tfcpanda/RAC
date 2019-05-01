@@ -21,6 +21,8 @@ public class Product implements java.io.Serializable {
 	private String name;
 	private Integer price;
 	private String description;
+	private Integer status;
+
 	private Set<CartItem> caritems = new HashSet<CartItem>(0);
 
 	public Product() {
@@ -30,13 +32,16 @@ public class Product implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public Product(int id, String name, Integer price, String description, Set<CartItem> caritems) {
+	public Product(int id, String name, Integer price, String description,Integer status, Set<CartItem> caritems) {
 		this.id = id;
 		this.name = name;
 		this.price = price;
+		this.status = status;
 		this.description = description;
 		this.caritems = caritems;
 	}
+
+
 
 	@Id
 
@@ -74,6 +79,14 @@ public class Product implements java.io.Serializable {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public Integer getStatus() {
+		return status;
+	}
+
+	public void setStatus(Integer status) {
+		this.status = status;
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "product")

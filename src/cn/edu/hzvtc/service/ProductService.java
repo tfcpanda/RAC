@@ -10,4 +10,8 @@ public interface ProductService {
 
 	public Product findById(int id);
 
+	public void outStock(Product outProduct);
+
+	public List<Product> backFindAll();
+
 }

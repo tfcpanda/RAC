@@ -48,18 +48,14 @@
 					<td ALIGN=RIGHT><font size="3" face="微软雅黑">邮箱</font></td>
 					<td ALIGN=LEFT><input type="texe" name="email"></td>
 				</tr>
-				<tr >
-					<td ALIGN=RIGHT><font size="3" face="微软雅黑">资金</font></td>
-					<td ALIGN=LEFT><input type="texe" name="money"></td>
-				</tr>
 				<tr>
 					<td ALIGN=RIGHT><font size="3" face="微软雅黑">真实姓名</font></td>
 					<td ALIGN=LEFT><input type="texe" name="actualname"></td>
 				</tr>
-				<!-- <tr >
-					<td ALIGN=RIGHT><font size="3" face="微软雅黑">身份证号</font></td>
-					<td ALIGN=LEFT><input type="texe" name="idcard"></td>
-				</tr> -->
+				 <tr >
+					<td ALIGN=RIGHT><font size="3" face="微软雅黑">地址</font></td>
+					<td ALIGN=LEFT><input type="texe" name="address"></td>
+				</tr> 
 					</table>
 				</td>
 				<td width="400"></td>

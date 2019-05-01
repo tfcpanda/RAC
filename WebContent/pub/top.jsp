@@ -14,13 +14,14 @@
 			</s:if>
 			<s:else>
 				<li><s:property value="#session.existUser.name" /></li>
-				<li><a href="${pageContext.request.contextPath}/car_orderPage.action">我的订单</a></li>
+				<li><a href="${pageContext.request.contextPath}/car_orderPage.action">我的购物车</a></li>
+				<li><a href="${pageContext.request.contextPath}/order_findByUid.action?page=1">我的订单</a></li>
 				<!-- 销毁session -->
 				<li><a
 					href="${pageContext.request.contextPath}/user_quit.action">退出</a></li>
 			</s:else>
 
-			<li><a href="#">关于</a></li>
+			
 			<li><a href="#">帮助</a></li>
 			<li><a href="#">APP下载</a></li>
 		</ul>

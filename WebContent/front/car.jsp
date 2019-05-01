@@ -61,7 +61,8 @@
 										</span></td>
 										<td><s:property value="#cartItem.number" /></td>
 										<td><s:property value="#cartItem.sum" /></td>
-										<td><a href="${pageContext.request.contextPath}/car_removeCart.action?id=<s:property value="#cartItem.product.id" />">删除</a></td>
+										<td><a
+											href="${pageContext.request.contextPath}/car_removeCart.action?id=<s:property value="#cartItem.product.id" />">删除</a></td>
 									</tr>
 								</s:iterator>
 
@@ -102,8 +103,8 @@
 														</div>
 													</div>
 													<a
-														href="${pageContext.request.contextPath}/car_clearCart.action">清空购物车</a>
-													<a id="J_Go" class=" btn-go" title="点击此按钮，提交订单。">提交订单<b
+													 href="${pageContext.request.contextPath}/car_clearCart.action">清空购物车</a>
+													<a href="${pageContext.request.contextPath}/order_save.action" id="J_Go" class=" btn-go">提交订单<b
 														class="dpl-button"></b></a>
 												</div>
 											</div>

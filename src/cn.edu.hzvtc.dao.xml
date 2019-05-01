@@ -30,4 +30,8 @@
 	<bean id="adminDao" class="cn.edu.hzvtc.dao.impl.AdminDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
+	<!--订单dao配置 -->
+	<bean id="orderDao" class="cn.edu.hzvtc.dao.impl.OrderDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
 </beans>

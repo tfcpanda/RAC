@@ -18,8 +18,8 @@ public class CartItem implements java.io.Serializable {
 
 	private int id;
 	private Product product;
-	private Integer number;
-	private Integer sum;
+	private double number;
+	private double sum;
 
 	public CartItem() {
 	}
@@ -28,7 +28,7 @@ public class CartItem implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public CartItem(int id, Product product, Integer number, Integer sum) {
+	public CartItem(int id, Product product, double number, double sum) {
 		this.id = id;
 		this.product = product;
 		this.number = number;
@@ -57,21 +57,21 @@ public class CartItem implements java.io.Serializable {
 	}
 
 	@Column(name = "number")
-	public Integer getNumber() {
+	public double getNumber() {
 		return this.number;
 	}
 
-	public void setNumber(Integer number) {
+	public void setNumber(double number) {
 		this.number = number;
 	}
 
 	@Column(name = "SUM")
-	public Integer getSum() {
+	public Double getSum() {
 		return number * product.getPrice();
 	}
-	
+
 	//手动计算出来
-	public void setSum(Integer sum) {
+	public void setSum(double sum) {
 		this.sum = sum;
 	}
 

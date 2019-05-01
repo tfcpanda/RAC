@@ -22,37 +22,43 @@ public class User implements java.io.Serializable {
 	private Integer id;
 	private String password;
 	private String name;
-	private int phone;
+	private String phone;
 	private String email;
-	private int money;
 	private String actualname;
-	private int idcard;
-	private Integer comment;
+	private String address;
+
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
 	private Set<Order> orders = new HashSet<Order>(0);
 
 	public User() {
 	}
 
-	public User(String password, String name, int phone, String email, int money, String actualname, int idcard) {
+	public User(String password, String name, String phone, String email, String actualname ,String address ) {
 		this.password = password;
 		this.name = name;
 		this.phone = phone;
 		this.email = email;
-		this.money = money;
 		this.actualname = actualname;
-		this.idcard = idcard;
+		this.address = address;
+
 	}
 
-	public User(String password, String name, int phone, String email, int money, String actualname, int idcard,
-			Integer comment, Set<Order> orders) {
+	public User(String password, String name, String phone, String email, String actualname,String address, Set<Order> orders) {
+
 		this.password = password;
 		this.name = name;
 		this.phone = phone;
 		this.email = email;
-		this.money = money;
 		this.actualname = actualname;
-		this.idcard = idcard;
-		this.comment = comment;
+		this.address = address;
 		this.orders = orders;
 	}
 
@@ -87,11 +93,11 @@ public class User implements java.io.Serializable {
 	}
 
 	@Column(name = "PHONE", nullable = false)
-	public int getPhone() {
+	public String getPhone() {
 		return this.phone;
 	}
 
-	public void setPhone(int phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 
@@ -104,14 +110,7 @@ public class User implements java.io.Serializable {
 		this.email = email;
 	}
 
-	@Column(name = "MONEY", nullable = false)
-	public int getMoney() {
-		return this.money;
-	}
 
-	public void setMoney(int money) {
-		this.money = money;
-	}
 
 	@Column(name = "ACTUALNAME", nullable = false)
 	public String getActualname() {
@@ -122,23 +121,8 @@ public class User implements java.io.Serializable {
 		this.actualname = actualname;
 	}
 
-	@Column(name = "IDCARD", nullable = false)
-	public int getIdcard() {
-		return this.idcard;
-	}
 
-	public void setIdcard(int idcard) {
-		this.idcard = idcard;
-	}
 
-	@Column(name = "COMMENT")
-	public Integer getComment() {
-		return this.comment;
-	}
-
-	public void setComment(Integer comment) {
-		this.comment = comment;
-	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
 	public Set<Order> getOrders() {

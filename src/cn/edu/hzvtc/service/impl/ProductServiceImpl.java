@@ -16,7 +16,7 @@ public class ProductServiceImpl implements ProductService{
 	//查询全部方法
 	public List<Product> findAll(){
 		return productDao.findall();
-		
+
 	}
 
 	//根据ID查询商品
@@ -24,4 +24,15 @@ public class ProductServiceImpl implements ProductService{
 		return productDao.findById(id);
 	}
 
+	/*
+	 * 下架操作
+	 */
+	@Override
+	public void outStock(Product outProduct) {
+		productDao.outStock(outProduct);
+	}
+	@Override
+	public List<Product> backFindAll() {
+		return productDao.backFindAll();
+	}
 }

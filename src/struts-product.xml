@@ -6,6 +6,9 @@
 		<action name="product_*" class="ProductAction" method="{1}">
 			<result name="findById">/front/product.jsp</result>
 			<result name="backProduct">/back/product-list.jsp</result>
+			<result name="OutStockSuccess" type="redirect">product_backProduct</result>
+			<result name="PutStockSuccess" type="redirect">product_backProduct</result>
+			<result name="addProduct">/back/pro-input.jsp</result>	
 		</action>
 	</package>
 </struts>

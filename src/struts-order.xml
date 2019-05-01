@@ -4,7 +4,11 @@
 	<package name="order" namespace="/"
 		extends="struts-default,json-default">
 		<action name="order_*" class="OrderAction" method="{1}">
-			<result name="order">/front/orderList.jsp</result>
+			<result name="saveSuccess">/front/order.jsp</result>
+			<result name="login">/front/login.jsp</result>
+			<result name="findByOidSuccess">/front/order.jsp</result>
+			<result name="findByUidSuccess">/front/orderList.jsp</result>
+			<result name="payOrder">/front/payok.jsp</result>
 		</action>
 	</package>
 </struts>
