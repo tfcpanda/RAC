@@ -31,7 +31,7 @@ public class OrderAction extends ActionSupport implements ModelDriven<Order>{
 	 * 接受page参数
 	 */
 	private Integer page;
-	
+
 	public void setPage(Integer page) {
 		this.page = page;
 	}
@@ -67,7 +67,7 @@ public class OrderAction extends ActionSupport implements ModelDriven<Order>{
 			this.addActionError("你还没有登录，清先登录");
 			return "login";
 		}
-		
+
 		order.setUser(existUser);
 		orderService.save(order);
 		//2.将订单对象显示到页面上
@@ -93,7 +93,7 @@ public class OrderAction extends ActionSupport implements ModelDriven<Order>{
 		order = orderService.findByOid(order.getOid());
 		return "findByOidSuccess";
 	}
-	
+
 	//付款的方法
 	public String payOrder() {
 		//修改订单
@@ -104,7 +104,6 @@ public class OrderAction extends ActionSupport implements ModelDriven<Order>{
 		currOrder.setState(2);
 		orderService.update(currOrder);
 		//为订单付款
-		
 		return "payOrder";
 	}
 }

@@ -16,7 +16,7 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 	private static final long serialVersionUID = 1L;
 	//模型驱动要使用的对象
 	private User user = new User();
-	
+
 	public User getModel() {
 		return user;
 	}
@@ -26,14 +26,14 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 	public String registPage() {
 		return "registPage";
 	}
-	
+
 	//注入userService
 	private UserService userService;
-		
+
 	public void setUserService(UserService userService) {
 		this.userService = userService;
 	}
-	
+
 	/*
 	 * 用户注册方法
 	 */
@@ -41,14 +41,14 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 		userService.save(user);
 		return "regist";
 	}
-	
+
 	/*
 	 * 跳转到登录页面的执行方法
 	 */
 	public String loginPage() {
 		return "loginPage";
 	}
-	
+
 	/*
 	 * 用户登录的方法
 	 */
@@ -65,9 +65,9 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 			//完成页面的跳转
 			return "loginSuccess";
 		}
-		
+
 	}
-	
+
 	/*
 	 * 用户退出的方法
 	 */
@@ -76,5 +76,5 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 		ServletActionContext.getRequest().getSession().invalidate();
 		return "quit";
 	}
-	
-	}
+
+}

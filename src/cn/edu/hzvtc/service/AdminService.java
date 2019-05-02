@@ -12,4 +12,6 @@ public interface AdminService {
 	public void save(Admin admin);
 	
 	public List<Admin> findAll();
+
+	public void update(Admin admin);
 }

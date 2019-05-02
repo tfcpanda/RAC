@@ -23,14 +23,14 @@ public class AdminAction extends ActionSupport implements ModelDriven<Admin>{
 	public Admin getModel() {
 		return admin;
 	}
-	
+
 	//注入adminService
 	private AdminService adminService;
 
 	public void setAdminService(AdminService adminService) {
 		this.adminService = adminService;
 	}
-	
+
 	/*
 	 * 执行页面访问的方法
 	 * 
@@ -65,7 +65,7 @@ public class AdminAction extends ActionSupport implements ModelDriven<Admin>{
 		ServletActionContext.getRequest().getSession().invalidate();
 		return "quit";
 	}
-	
+
 	/*
 	 * 查询全部
 	 */
@@ -74,5 +74,31 @@ public class AdminAction extends ActionSupport implements ModelDriven<Admin>{
 		//将数据放入session的范围
 		ActionContext.getContext().getSession().put("clist", clist);
 		return "adminAll";
+	}
+	/*
+	 * 跳转到添加管理员信息
+	 */
+	public String pageAdmin() {
+		return "pageAdmin";
+	}
+	/*
+	 * 增加管理员信息
+	 */
+	public String addAdmin() {
+		adminService.save(admin);
+		return "addAdmin";
+	}
+	/*
+	 * 跳转更改管理员信息
+	 */
+	public String pageReAdmin() {
+		return "pageReAdmin";
+	}
+	/*
+	 * 更改管理员信息
+	 */
+	public String reAdmin() {
+		adminService.update(admin);
+		return "reAdmin";
 	}
 }

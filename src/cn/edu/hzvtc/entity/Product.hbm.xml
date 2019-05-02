@@ -6,7 +6,7 @@
     <class name="cn.edu.hzvtc.entity.Product" table="product" catalog="rac" optimistic-lock="version">
         <id name="id" type="int">
             <column name="ID" />
-            <generator class="assigned" />
+            <generator class="identity" />
         </id>
         <property name="name" type="string">
             <column name="NAME">

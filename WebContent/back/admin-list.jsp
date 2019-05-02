@@ -10,10 +10,14 @@
 
 <meta charset="UTF-8">
 <title>后台管理</title>
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/common.css" />
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/main.css" />
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/modernizr.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/jquery-3.3.1.min.js">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/css/common.css" />
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/css/main.css" />
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/js/modernizr.min.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/scripts/jquery-3.3.1.min.js">
 	
 </script>
 </head>
@@ -54,9 +58,11 @@
 				<form name="myform" id="myform" method="post">
 					<div class="result-title">
 						<div class="result-list">
-							<a href=emp-input><i class="icon-font"></i>增加管理员</a> <a
-								id="batchDel" href="javascript:void(0)"><i class="icon-font"></i>批量删除</a>
-							<a id="updateOrd" href="javascript:void(0)"><i
+							<a
+								href="${pageContext.request.contextPath}/admin_pageAdmin.action"><i
+								class="icon-font"></i>增加管理员</a> <a id="batchDel"
+								href="javascript:void(0)"><i class="icon-font"></i>批量删除</a> <a
+								id="updateOrd" href="javascript:void(0)"><i
 								class="icon-font"></i>更新排序</a>
 						</div>
 					</div>
@@ -80,14 +86,15 @@
 										<td class="tc"><input type="checkbox" id="temp"
 											value="<s:property value="#c.id"/>" name="check"></td>
 
-								
+
 										<td><s:property value="#c.id" /></td>
 										<td><s:property value="#c.name" /></td>
 										<td><s:property value="#c.password" /></td>
 										<td><a class="delete"
 											href="emp-delete?id=<s:property value="#c.id"/>">删除</a> <input
 											type="hidden" value="<s:property value="#c.name" />"></td>
-										<td><a href="emp-input?id=<s:property value="#c.id"/>">编辑</a></td>
+										<td><a
+											href="${pageContext.request.contextPath}/admin_pageReAdmin.action?id=<s:property value="#c.id"/>">编辑</a></td>
 									</tr>
 								</s:iterator>
 							</tbody>

@@ -13,6 +13,8 @@ public interface AdminDao {
 	public Admin login(Admin admin);
 	
 	public List<Admin> findall();
+
+	public void update(Admin admin);
 	
 	
 

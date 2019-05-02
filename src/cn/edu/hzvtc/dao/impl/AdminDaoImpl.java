@@ -40,6 +40,12 @@ public class AdminDaoImpl extends HibernateDaoSupport implements AdminDao {
 	}
 
 
+	@Override
+	public void update(Admin admin) {
+		getHibernateTemplate().update(admin);
+	}
+
+
 
 
 }

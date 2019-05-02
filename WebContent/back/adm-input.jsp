@@ -29,37 +29,30 @@
 				<div class="crumb-list">
 					<i class="icon-font"></i><a href="index.jsp">首页</a><span
 						class="crumb-step">&gt;</span><a class="crumb-name"
-						href="emp-list">产品列表</a><span class="crumb-step">&gt;</span><span>新增产品信息</span>
+						href="emp-list">管理员信息</a><span class="crumb-step">&gt;</span><span>新增管理员</span>
 				</div>
 			</div>
 			<div class="result-wrap">
 				<div class="result-content">
 					<form id="saveForm"
-						action="${pageContext.request.contextPath}/product_addProduct.action"
+						action="${pageContext.request.contextPath}/admin_addAdmin.action"
 						method="post">
 						<table class="insert-tab" width="100%">
 							<tbody>
 								<!--姓名开始-->
 								<tr>
-									<th>产品名称：</th>
+									<th>账号：</th>
 									<td><input class="common-text required" id="name"
-										name="name" size="50" value="" type="text"></td>
+										name="name" size="50" type="text"></td>
 								</tr>
 								<!--姓名结束-->
 								<!--邮箱开始-->
 								<tr>
-									<th>产品价格：</th>
-									<td><input id="price" value="" class="common-text"
-										name="price" size="50" type="text"></td>
+									<th>密码：</th>
+									<td><input id="price" class="common-text" name="password"
+										size="50" type="text"></td>
 								</tr>
 								<!--邮箱结束-->
-								<!--生日开始-->
-								<tr>
-									<th>产品的利率：</th>
-									<td><input value="" id="profit" class="common-text"
-										name="description" size="50" type="text"></td>
-								</tr>
-								<!--生日结束-->
 								<tr>
 									<th></th>
 									<td><input class="btn btn-primary btn6 mr10" value="提交"

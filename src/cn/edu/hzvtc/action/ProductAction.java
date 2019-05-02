@@ -65,9 +65,19 @@ public class ProductAction extends ActionSupport implements ModelDriven<Product>
 
 
 	/*
-	 * 增加新商品
+	 * 跳转到增加商品页面
+	 */
+	public String ProductPage() {
+		product = productService.findById(product.getId());
+		return "ProductPage";
+	}
+	
+	/*
+	 * 增加商品
 	 */
 	public String addProduct() {
+		product.setStatus(1);
+		productService.save(product);
 		return "addProduct";
 	}
 }

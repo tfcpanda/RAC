@@ -14,4 +14,6 @@ public interface ProductDao {
 
 	public List<Product> backFindAll();
 
+	public void save(Product product);
+
 }

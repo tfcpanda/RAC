@@ -44,5 +44,11 @@ public class AdminServiceImpl implements AdminService {
 	public List<Admin> findAll() {
 		return adminDao.findall();
 	}
+
+	@Override
+	public void update(Admin admin) {
+		adminDao.update(admin);
+		
+	}
 	
 }

@@ -61,7 +61,7 @@
 				<form name="myform" id="myform" method="post">
 					<div class="result-title">
 						<div class="result-list">
-							<a href="${pageContext.request.contextPath}/product_addProduct.action"><i
+							<a href="${pageContext.request.contextPath}/product_ProductPage.action"><i
 								class="icon-font"></i>增加产品</a>
 						</div>
 					</div>
@@ -108,7 +108,7 @@
 										</s:if>
 										<s:else>
 											<td><a
-												href="product_putStock?id=<s:property value="#c.id"/>">已被下架,点击上架</a>
+												href="product_putStock?id=<s:property value="#c.id"/>">上架</a>
 												<input type="hidden" value="<s:property value="#c.name" />"></td>
 										</s:else>
 										<%-- <td><a href="emp-input?id=<s:property value="#c.id"/>">编辑</a></td> --%>

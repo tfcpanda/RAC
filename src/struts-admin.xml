@@ -8,6 +8,10 @@
 			<result name="adminSuccess" type="redirect">/emp-list</result>
 			<result name="quit">/back/login.jsp</result>
 			<result name="adminAll">/back/admin-list.jsp</result>
+			<result name="pageAdmin">/back/adm-input.jsp</result>
+			<result name="addAdmin" type="redirect">admin_adminAll</result>
+			<result name="pageReAdmin">/back/adm-input.jsp</result>
+			<result name="reAdmin" type="redirect">admin_adminAll</result>
 		</action>
 	</package>
 </struts>

@@ -8,7 +8,8 @@
 			<result name="backProduct">/back/product-list.jsp</result>
 			<result name="OutStockSuccess" type="redirect">product_backProduct</result>
 			<result name="PutStockSuccess" type="redirect">product_backProduct</result>
-			<result name="addProduct">/back/pro-input.jsp</result>	
+			<result name="ProductPage">/back/pro-input.jsp</result>	
+			<result name="addProduct" type="redirect">product_backProduct</result>
 		</action>
 	</package>
 </struts>

@@ -38,6 +38,11 @@ public class ProductDaoImpl extends HibernateDaoSupport implements ProductDao{
 		return list;
 	}
 
+	//添加操作
+	public void save(Product product) {
+		getHibernateTemplate().save(product);
+	}
+
 
 
 }

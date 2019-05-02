@@ -14,4 +14,6 @@ public interface ProductService {
 
 	public List<Product> backFindAll();
 
+	public void save(Product product) ;
+
 }

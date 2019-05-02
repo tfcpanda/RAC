@@ -35,4 +35,11 @@ public class ProductServiceImpl implements ProductService{
 	public List<Product> backFindAll() {
 		return productDao.backFindAll();
 	}
+	
+	/*
+	 * 添加操作
+	 */
+	public void save(Product product) {
+		productDao.save(product);
+	}
 }
